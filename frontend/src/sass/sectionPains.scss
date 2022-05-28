@@ -1,0 +1,17 @@
+.sectionPains{
+    background-color: transparent;
+    width: 85%;
+    overflow: hidden;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+.contentChips{
+    background-color: transparent;
+    height: 120px;
+    @include wrapPosition;
+    overflow:scroll;
+    overflow-x:hidden;
+    margin-top: 5px;
+}
