@@ -2,11 +2,22 @@ import React, { useState } from "react";
 import "./App.css";
 import "./css/main.css";
 import Home from "./components/Home";
+import Doctor from "./components/Doctor";
 import { IconCapsule, IconDoctor, IconLogo } from "./components/Icons";
 
 function App() {
   const [getHome, setHome] = useState(true);
-  const [getDocto, setDoctor] = useState(false);
+  const [getDoctor, setDoctor] = useState(false);
+
+  const clickDoctor = () => {
+    setDoctor(true);
+    setHome(false);
+  };
+
+  const clickHome = () => {
+    setHome(true);
+    setDoctor(false);
+  };
 
   return (
     <>
@@ -15,12 +26,15 @@ function App() {
           <IconLogo />
           <label className="textLogo">Pastilla</label>
           <div className="contentBtnDoctor">
-            <IconCapsule className="icon"/>
-            <IconDoctor className="icon" />
+            <IconCapsule className="icon" onClick={clickHome} />
+            <IconDoctor className="icon" onClick={clickDoctor} />
           </div>
         </div>
       </div>
-      <Home />
+      <div className="content">
+        {getHome ? <Home /> : null}
+        {getDoctor ? <Doctor /> : null}
+      </div>
     </>
   );
 }
