@@ -21,3 +21,23 @@
     font-weight:bold;
 }
 
+.contentBtnDoctor{
+    @include centerPosition;
+    float: right;
+    position: relative;
+    right: 30px;
+}
+
+.icon{
+    margin: auto 3px;
+    @include centerPosition;
+    color:map-get($colorButton, icon);
+    border: none;
+    width: 70%;
+    height: 35px;
+    border-radius: 10px;
+    font-weight: bold;
+    &:active{
+        color:map-get($colorButton, iconAct);
+    }
+}

@@ -17,9 +17,6 @@ export default function CardMedicine(props) {
         <label className="subtitle">Nivel Dolor: </label>
         <label className="chipAlert">{props.levelPain}</label>
       </div>
-      <div className="contentBtnDoctor">
-        <button className="btnDoctor">Consultar a medico</button>
-      </div>
     </div>
   );
 }

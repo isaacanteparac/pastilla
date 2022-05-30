@@ -46,22 +46,3 @@
     padding: 0 5px;
 }
 
-.contentBtnDoctor{
-    @include centerPosition;
-    margin: 10px 0;
-    margin-top: 15px;
-}
-
-.btnDoctor{
-    margin: auto;
-    color: map-get($colorText, button);
-    background-color: map-get($colorButton, doctor);
-    border: none;
-    width: 70%;
-    height: 35px;
-    border-radius: 10px;
-    font-weight: bold;
-    &:active{
-        background-color: map-get($colorButton, doctorAct);
-    }
-}
