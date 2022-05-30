@@ -11,16 +11,21 @@ $colorText:(
     labelInput:#6f6d6d,
     button:#FFFFFF,
     chip:#0EE3B9,
-    titleMedicine:#0ab9e5,
-    viewText:#800cec,
+    titleMedicine:#000,
+    subtitle:#0099FF,
+    description:#302D2D,
 );
 
 $colorButton:(
     submitC:#0862F9,
     submitAct: #0449c1,
+    chipAlert:#F95287,
     chip:#0EE3B9,
+    doctor:#8e00ff,
+    doctorAct:#470080,
 );
 
 $colorBorder:(
     lgray:#6f6d6d,
 )
+

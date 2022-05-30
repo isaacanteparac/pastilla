@@ -136,38 +136,69 @@
   background-color: transparent;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 5px; }
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px; }
 
 .cardMedicine {
   background-color: #FFFFFF;
-  box-shadow: 5px 5px 5px #e4e2e2;
-  width: 40%;
+  webkit-box-shadow: 0px 0px 11px 0px #e4e2e2;
+  -moz-box-shadow: 0px 0px 11px 0px #e4e2e2;
+  box-shadow: 0px 0px 11px 0px #e4e2e2;
+  width: 95%;
   margin: auto;
   padding: 5px;
   border-radius: 10px;
-  min-height: 100px;
-  max-height: 120px;
   overflow: hidden;
   margin-bottom: 15px; }
 
 .nameMedicine {
-  color: #0ab9e5;
+  color: #000;
   font-weight: 700;
-  font-size: 15px;
-  font-family: 'Segoe UI'; }
+  font-size: 18px;
+  font-family: 'Segoe UI';
+  text-transform: capitalize; }
 
 .description {
-  color: #6f6d6d;
+  color: #302D2D;
   font-family: 'Segoe UI';
-  font-size: 12px;
+  font-size: 13px;
   background-color: transparent;
-  height: 50px;
-  overflow: hidden;
-  margin: 0; }
+  margin: 10px 0; }
 
-.viewText {
-  color: #800cec;
-  font-family: 'Segoe UI'; }
-  .viewText:hover {
-    text-decoration: underline; }
+.chipAlertMedicine {
+  margin: 10px 0; }
+
+.subtitle {
+  color: #0099FF;
+  font-family: 'Segoe UI';
+  font-weight: 500;
+  text-transform: capitalize; }
+
+.chipAlert {
+  background-color: #F95287;
+  color: #FFFFFF;
+  font-family: 'Segoe UI';
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 0 5px; }
+
+.contentBtnDoctor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  margin-top: 15px; }
+
+.btnDoctor {
+  margin: auto;
+  color: #FFFFFF;
+  background-color: #8e00ff;
+  border: none;
+  width: 70%;
+  height: 35px;
+  border-radius: 10px;
+  font-weight: bold; }
+  .btnDoctor:active {
+    background-color: #470080; }

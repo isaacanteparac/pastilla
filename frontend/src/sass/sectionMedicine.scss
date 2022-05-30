@@ -11,6 +11,6 @@
 .contentCard{
     background-color: transparent;
     width: 100%;
-    @include wrapPosition;
-    margin-top: 5px;
+    @include centerPositionColumn;
+    margin-top: 15px;
 }
