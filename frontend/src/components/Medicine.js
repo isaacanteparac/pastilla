@@ -92,14 +92,12 @@ export default function AllCardMedicine(props) {
       <div className="contentCard">
         {medicines?.map((medicine) => (
           <Card
-            nameMedicine={medicine.name}
+            nameTitle={medicine.name}
             description={medicine.description}
             name1="edad"
             contentName1={medicine.age}
-
             name2="peso"
             contentName2={medicine.weight}
-
             name3="peso"
             contentName3={medicine.levelPain}
           />
