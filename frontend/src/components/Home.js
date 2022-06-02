@@ -1,6 +1,6 @@
 import React from 'react'
-import AllPains from './chips_Content/AllPains'
-import AllCardMedicine from './contentMedicine/AllCardMedicine'
+import AllChips from './chips_Content/AllChips'
+import AllCardMedicine from './Medicine'
 import MedicalRecord from './MedicalRecord'
 
 export default function Home(){
@@ -8,7 +8,7 @@ export default function Home(){
     return (
       <>
         <MedicalRecord/>
-        <AllPains nameSection="Malestares"/>
+        <AllChips nameSection1="Enfermedades" nameSection2="Sintomas"/>
         <AllCardMedicine nameSection="Medicamentos"/>
       </>
     )

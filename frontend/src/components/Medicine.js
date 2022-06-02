@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CardMedicine from "./CardMedicine";
+import Card from "./Card";
 
 const data = [
   {
@@ -91,12 +91,17 @@ export default function AllCardMedicine(props) {
       <label className="TitleSection">{props.nameSection}</label>
       <div className="contentCard">
         {medicines?.map((medicine) => (
-          <CardMedicine
+          <Card
             nameMedicine={medicine.name}
             description={medicine.description}
-            age={medicine.age}
-            weight={medicine.weight}
-            levelPain={medicine.levelPain}
+            name1="edad"
+            contentName1={medicine.age}
+
+            name2="peso"
+            contentName2={medicine.weight}
+
+            name3="peso"
+            contentName3={medicine.levelPain}
           />
         ))}
       </div>

@@ -33,7 +33,7 @@ function App() {
       </div>
       <div className="content">
         {getHome ? <Home /> : null}
-        {getDoctor ? <Doctor /> : null}
+        {getDoctor ? <Doctor nameSection="Medicos"/> : null}
       </div>
     </>
   );
