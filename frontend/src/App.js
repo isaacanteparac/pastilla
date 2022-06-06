@@ -23,11 +23,10 @@ function App() {
     <>
       <div className="head">
         <div className="contentHead">
-          <IconLogo />
-          <label className="textLogo">Pastilla</label>
+          <label className="textLogo">Paztilla</label>
           <div className="contentBtnDoctor">
-            <IconCapsule className="icon" onClick={clickHome} />
-            <IconDoctor className="icon" onClick={clickDoctor} />
+            <button onClick={clickDoctor} className="contentBtnHeader"><IconDoctor className="icon" /> Doctores </button>
+            <button onClick={clickHome} className="contentBtnHeader"><IconCapsule className="icon" /> Medicinas </button>
           </div>
         </div>
       </div>

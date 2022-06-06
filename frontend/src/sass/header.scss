@@ -21,11 +21,24 @@
     font-weight:bold;
 }
 
-.contentBtnDoctor{
+.contentBtnHeader{
     @include centerPosition;
     float: right;
     position: relative;
     right: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 3px;
+    bottom: 25px;
+    margin: 0 3px;
+    border: none;
+    color: map-get($colorText, titleMedicine );
+    font-weight: 600;
+
+    &:hover{
+        border: 1px solid map-get($colorBackground, shadowB);
+        box-shadow: 3px 3px 3px map-get($colorBackground, shadowB);
+    }
 }
 
 .icon{
@@ -34,7 +47,7 @@
     color:map-get($colorButton, icon);
     border: none;
     width: 70%;
-    height: 35px;
+    height: 25px;
     border-radius: 10px;
     font-weight: bold;
     &:active{

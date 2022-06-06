@@ -20,27 +20,36 @@
   font-size: 20px;
   font-weight: bold; }
 
-.contentBtnDoctor {
+.contentBtnHeader {
   display: flex;
   align-items: center;
   justify-content: center;
   float: right;
   position: relative;
-  right: 30px; }
+  right: 30px;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 3px;
+  bottom: 25px;
+  margin: 0 3px;
+  border: none;
+  color: #000;
+  font-weight: 600; }
+  .contentBtnHeader:hover {
+    border: 1px solid #e4e2e2;
+    box-shadow: 3px 3px 3px #e4e2e2; }
 
 .icon {
   margin: auto 3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #949399;
+  color: #000000;
   border: none;
   width: 70%;
-  height: 35px;
+  height: 25px;
   border-radius: 10px;
   font-weight: bold; }
-  .icon:active {
-    color: #656565; }
 
 .content {
   margin-top: 50px;
