@@ -29,11 +29,11 @@
     background-color: transparent;
     border-radius: 10px;
     padding: 3px;
-    bottom: 25px;
-    margin: 0 3px;
+    bottom: 30px;
     border: none;
+    font-family: 'Segoe UI';
     color: map-get($colorText, titleMedicine );
-    font-weight: 600;
+    font-weight: bold;
 
     &:hover{
         border: 1px solid map-get($colorBackground, shadowB);
