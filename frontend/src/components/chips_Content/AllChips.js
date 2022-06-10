@@ -13,6 +13,17 @@ const data = [
   { name: "holdddda" },
   { name: "hola mundo moderno" },
   { name: "hola mundo moderno" },
+  { name: "hola" },
+  { name: "rafffta" },
+  { name: "hola" },
+  { name: "rata" },
+  { name: "hola" },
+  { name: "rata" },
+  { name: "holfdfda" },
+  { name: "ratffffa" },
+  { name: "holdddda" },
+  { name: "hola mundo moderno" },
+  { name: "hola mundo moderno" },
 ];
 
 const dataSick = [
@@ -20,7 +31,19 @@ const dataSick = [
   { name: "resfriado" },
   { name: "covid 19" },
   { name: "viruela del mono" },
-]
+  { name: "glucosa" },
+  { name: "resfriado" },
+  { name: "covid 19" },
+  { name: "viruela del mono" },
+  { name: "glucosa" },
+  { name: "resfriado" },
+  { name: "covid 19" },
+  { name: "viruela del mono" },
+  { name: "glucosa" },
+  { name: "resfriado" },
+  { name: "covid 19" },
+  { name: "viruela del mono" },
+];
 
 export default function AllChips(props) {
   const [pains, setPains] = useState([]);

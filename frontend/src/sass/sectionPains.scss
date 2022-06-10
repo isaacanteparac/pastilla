@@ -9,10 +9,15 @@
 }
 
 .contentChips{
-    background-color: transparent;
-    height: 125px;
+    background-color: map-get($colorBackground, boxs);
+    box-shadow: 5px 5px 5px map-get($colorBackground, shadowB);
+    border-radius: 10px;
+    width: 95%;
+    margin: auto;
+    height: 132px;
     @include wrapPosition;
     overflow:scroll;
     overflow-x:hidden;
-    margin-top: 5px;
+    margin-top: 10px;
+    padding: 5px;
 }

@@ -38,6 +38,8 @@
   .contentBtnHeader:hover {
     border: 1px solid #e4e2e2;
     box-shadow: 3px 3px 3px #e4e2e2; }
+  .contentBtnHeader:active {
+    background-color: #e4e2e2; }
 
 .icon {
   margin: auto 3px;
@@ -49,7 +51,9 @@
   width: 70%;
   height: 25px;
   border-radius: 10px;
-  font-weight: bold; }
+  font-weight: bold;
+  position: relative;
+  top: 3px; }
 
 .content {
   margin-top: 50px;
@@ -121,30 +125,34 @@
   border-radius: 20px; }
 
 .contentChips {
-  background-color: transparent;
-  height: 125px;
+  background-color: #FFFFFF;
+  box-shadow: 5px 5px 5px #e4e2e2;
+  border-radius: 10px;
+  width: 95%;
+  margin: auto;
+  height: 132px;
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
   overflow-x: hidden;
-  margin-top: 5px; }
+  margin-top: 10px;
+  padding: 5px; }
 
 .chips {
-  background-color: #FFFFFF;
-  box-shadow: 5px 5px 5px #e4e2e2;
+  background-color: #e4e2e2;
   border-radius: 30px;
-  height: 25px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   float: left;
   margin: 3px;
-  padding: 3px;
+  padding: 3px 5px;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  color: #0EE3B9; }
+  color: #302D2D; }
   .chips:active {
     background-color: #0EE3B9;
     color: #FFFFFF; }

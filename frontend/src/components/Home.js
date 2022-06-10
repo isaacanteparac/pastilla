@@ -9,7 +9,7 @@ export default function Home(){
       <>
         <MedicalRecord/>
         <AllChips nameSection1="Enfermedades" nameSection2="Sintomas"/>
-        <AllCardMedicine nameSection="Medicamentos"/>
+        <AllCardMedicine nameSection="Medicamentos buscados" nameSection2="Sugerencias de medicamentos"/>
       </>
     )
 }

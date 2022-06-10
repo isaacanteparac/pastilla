@@ -1,15 +1,14 @@
 .chips{
-    background-color: map-get($colorBackground, boxs);
-    box-shadow: 5px 5px 5px map-get($colorBackground, shadowB);
+    background-color:map-get($colorBackground, shadowB);
     border-radius: 30px;
-    height: 25px;
+    height: 20px;
     @include centerPosition;
     float: left;
     margin: 3px;
-    padding: 3px;
+    padding: 3px 5px;
  
     @include notUnderline;
-    color:map-get($colorText, chip);
+    color:map-get($colorText, description);
 
     &:active{
         background-color: map-get($colorButton, chip);

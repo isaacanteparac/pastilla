@@ -39,6 +39,9 @@
         border: 1px solid map-get($colorBackground, shadowB);
         box-shadow: 3px 3px 3px map-get($colorBackground, shadowB);
     }
+    &:active{
+        background-color: map-get($colorBackground, shadowB);
+    }
 }
 
 .icon{
@@ -50,6 +53,8 @@
     height: 25px;
     border-radius: 10px;
     font-weight: bold;
+    position: relative;
+    top: 3px;
     &:active{
         color:map-get($colorButton, iconAct);
     }
