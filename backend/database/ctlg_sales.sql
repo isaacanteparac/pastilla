@@ -1,6 +1,6 @@
 USE pastilla;
 
-CREATE TABLE ctlg_symphom (
+CREATE TABLE ctlg_sales (
     id INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     create_  timestamp NOT NULL DEFAULT current_timestamp,
@@ -9,4 +9,5 @@ CREATE TABLE ctlg_symphom (
     PRIMARY KEY (id)
 );
 
-//SINTOMAS
+//GENERICO
+//COMERCIAL

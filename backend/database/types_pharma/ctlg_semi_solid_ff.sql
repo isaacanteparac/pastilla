@@ -1,6 +1,6 @@
 USE pastilla;
 
-CREATE TABLE ctlg_symphom (
+CREATE TABLE ctlg_semi_solid_ff(
     id INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     create_  timestamp NOT NULL DEFAULT current_timestamp,
@@ -9,4 +9,4 @@ CREATE TABLE ctlg_symphom (
     PRIMARY KEY (id)
 );
 
-//SINTOMAS
+//nombre de medicamentos liquidos como inyection
