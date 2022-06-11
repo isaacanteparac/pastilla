@@ -1,6 +1,6 @@
 USE pastilla;
 
-CREATE TABLE ctlg_pharmaceutical_forms(
+CREATE TABLE ctlg_user_type (
     id INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     create_  timestamp NOT NULL DEFAULT current_timestamp,
@@ -9,7 +9,9 @@ CREATE TABLE ctlg_pharmaceutical_forms(
     PRIMARY KEY (id)
 );
 
-//solido
-//liquido
-//semi solido
+//usuario
+//doctor
+//admin
+
+
 
