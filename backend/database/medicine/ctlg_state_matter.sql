@@ -1,6 +1,6 @@
 USE pastilla;
 
-CREATE TABLE ctlg_opiacis (
+CREATE TABLE ctlg_state_matter (
     id INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     create_  timestamp NOT NULL DEFAULT current_timestamp,
@@ -8,9 +8,4 @@ CREATE TABLE ctlg_opiacis (
     delete_  timestamp NOT NULL DEFAULT current_timestamp,
     PRIMARY KEY (id)
 );
-
-//con receta medica
-//sin receta
-
-
-
+//solido //semi solido //liquido
