@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
+
+
 import {
   DivLeft,
   DivLogo,
@@ -22,46 +24,12 @@ export default function ContentLeft() {
         <Section>
           <TitleSection>Busca un síntoma por su letra inicial</TitleSection>
           <ContentSectionCircle>
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
-            <OptionLabelCircle>a</OptionLabelCircle>{" "}
             <OptionLabelCircle>a</OptionLabelCircle>
           </ContentSectionCircle>
         </Section>
         <Section>
           <TitleSection>sintomas</TitleSection>
           <ContentSection>
-            <OptionLabelLine>1 dolor en articulaciones</OptionLabelLine>
-            <OptionLabelLine>dolor en articulaciones</OptionLabelLine>
-            <OptionLabelLine>dolor en articulaciones</OptionLabelLine>
-            <OptionLabelLine>dolor en articulaciones</OptionLabelLine>
-            <OptionLabelLine>dolor en articulaciones</OptionLabelLine>
-            <OptionLabelLine>dolor en articulaciones</OptionLabelLine>
-            <OptionLabelLine>dolor en articulaciones</OptionLabelLine>
-            <OptionLabelLine>dolor en articulaciones</OptionLabelLine>
             <OptionLabelLine>
               dolor en articulaciones dolor en articulaciones dolor en
               articulaciones
