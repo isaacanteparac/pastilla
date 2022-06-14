@@ -6,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
   margin: 0;
-  background-color: #F5F5F5;
+  background-color: #000000;
 }
 
 code {
@@ -28,5 +28,5 @@ code {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #e4e2e2;
+  background-color:  #232121;
 }
