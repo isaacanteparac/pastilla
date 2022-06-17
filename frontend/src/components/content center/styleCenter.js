@@ -25,7 +25,7 @@ export const CardMedicineDiv = styled.div`
 `;
 
 export const TitleMedicine = styled.label`
-  color: #fff;
+  color:  #ff66b2;
   font-weight: 700;
   font-size: 18px;
   font-family: 'Segoe UI';
@@ -50,15 +50,14 @@ export const ChipAlertMedicine = styled.div`
 export const Subtitle = styled.label`
   color: #fff;
   font-family: 'Segoe UI';
-  font-weight: 500;
+
   text-transform: capitalize;
 `;
 
 export const ChipAlert = styled.label`
-  background-color: #f95287;
-  color: #fff;
+  background-color:  #ff66b2;
+  color: #000;
   font-family: 'Segoe UI';
-  font-weight: 500;
   border-radius: 10px;
   padding: 0 5px;
 `

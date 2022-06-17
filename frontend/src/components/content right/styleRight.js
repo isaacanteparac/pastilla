@@ -26,11 +26,7 @@ export const Section = styled.div`
   margin-top: 15px;
 `;
 
-export const TitleSection = styled.label`
-  color: #52caf9;
-  font-size: 20px;
-  font-weight: 500;
-`;
+
 
 export const ContentSection = styled.div`
   width: 90%;
@@ -61,8 +57,8 @@ export const DivInputMedicalRecord = styled.div`
 
 export const LabelInput = styled.label`
   font-family: "Segoe UI";
-  font-weight: 500;
-  color: #ffffff;
+ 
+  color: #FAFAFA;
   margin-right: 5px;
 `;
 
@@ -86,12 +82,12 @@ export const DivButton = styled.div`
 
 export const ButtonSent = styled.button`
   margin: auto;
-  background-color: #00ff80;
+  background-color:#8000ff;
   border-radius: 10px;
   font-family: "Segoe UI";
   font-weight: 500;
   font-size: 15px;
-  color: map-get($colorText, button);
+  color: #fff;
   width: 80%;
   height: 30px;
   border: none;
@@ -99,4 +95,28 @@ export const ButtonSent = styled.button`
   &:active {
     background-color:#10C86C;
   }
+`;
+
+export const DivDoctor = styled.div`
+  background-color: #171313;
+  margin: 15px 0;
+  border-radius: 10px;
+  padding: 5px;
+`;
+
+export const NameDoctor = styled.label`
+  color: #feff00;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 16px;
+`;
+
+export const DivInfoDoctor = styled.div`
+  margin: 10px 0;
+  margin-left: 3px;
+`;
+
+export const NameOptionDoctor = styled.label`
+  color: #b4b6b7;
+  margin-right: 8px;
 `;

@@ -42,7 +42,7 @@ export const Section = styled.div`
 `;
 
 export const TitleSection = styled.label`
-  color:#52caf9;
+  color:#00ff80;
   font-size: 20px;
   font-weight: 500;
 `;
@@ -73,12 +73,11 @@ export const OptionLabelLine = styled.label`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-weight: bold;
   &:hover {
     color: #ffffff;
   }
   &:active {
-    background-color: #004cfe;
+    background-color: #004cff;
     color: #ffffff;
   }
 `;
