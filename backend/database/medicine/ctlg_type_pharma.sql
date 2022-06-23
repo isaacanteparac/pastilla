@@ -1,6 +1,6 @@
 USE pastilla;
 
-CREATE TABLE ctlg_dust_type (
+CREATE TABLE ctlg_type_pharma (
     id INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,
     id_ctlg_pharmaceutical_forms INT(11),

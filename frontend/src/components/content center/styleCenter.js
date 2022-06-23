@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import {
+  colorComponent,
+  colorNameMedicine,
+  colorTextDescriptionMedicine,
+  colorTextSubtitle,
+  colorTextChip,
+  colorShadow,
+} from "../variables";
 
 export const DivCenter = styled.div`
   width: 60%;
@@ -11,30 +19,30 @@ export const DivCenter = styled.div`
   padding-top: 15px;
 `;
 
-
 export const CardMedicineDiv = styled.div`
-  background-color: #171313;
+  background-color: ${colorComponent};
   width: 45%;
   margin: auto;
   padding: 15px;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 15px;
-
-  
+  margin-bottom: 25px;
+  -webkit-box-shadow: 1px 0px 5px 3px ${colorShadow};
+  -moz-box-shadow: 1px 0px 5px 3px ${colorShadow};
+  box-shadow: 1px 0px 5px 3px ${colorShadow};
 `;
 
 export const TitleMedicine = styled.label`
-  color:  #ff66b2;
+  color: ${colorNameMedicine};
   font-weight: 700;
   font-size: 18px;
-  font-family: 'Segoe UI';
+  font-family: "Segoe UI";
   text-transform: capitalize;
-  `;
+`;
 
-export const Description  = styled.p`
-  color: #C6C1C1;
-  font-family: 'Segoe UI';
+export const Description = styled.p`
+  color: ${colorTextDescriptionMedicine};
+  font-family: "Segoe UI";
   font-size: 14px;
   background-color: transparent;
   margin: 10px 0;
@@ -48,16 +56,15 @@ export const ChipAlertMedicine = styled.div`
 `;
 
 export const Subtitle = styled.label`
-  color: #fff;
-  font-family: 'Segoe UI';
-
+  color: ${colorTextSubtitle};
+  font-family: "Segoe UI";
   text-transform: capitalize;
 `;
 
 export const ChipAlert = styled.label`
-  background-color:  #ff66b2;
-  color: #000;
-  font-family: 'Segoe UI';
+  background-color: transparent;
+  color: ${colorTextChip};
+  font-family: "Segoe UI";
   border-radius: 10px;
-  padding: 0 5px;
-`
+  padding: 0;
+`;

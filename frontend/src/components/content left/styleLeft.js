@@ -1,4 +1,15 @@
 import styled from "styled-components";
+import {
+  colorTitle,
+  colorOpActiveBg,
+  colorTextOpHover,
+  colorTextOption,
+  colorOptionBg,
+  colorTextLogo,
+  colorTextOpActive,
+  colorShadow,
+  lightTextLogo,
+} from "../variables";
 
 export const DivLeft = styled.div`
   background-color: transparent;
@@ -17,14 +28,21 @@ export const DivLeft = styled.div`
 export const DivLogo = styled.div`
   background: transparent;
   width: 95%;
-  margin: auto;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const LabelLogo = styled.label`
   font-family: "Segoe UI";
-  color: #7052f9;
+  color: ${colorTextLogo};
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 30px;
+  text-align: center;
+  -webkit-text-stroke: 1px ${lightTextLogo};
+  text-shadow: 0 0 5px ${lightTextLogo};
 `;
 
 export const ContentLeftD = styled.div`
@@ -42,7 +60,7 @@ export const Section = styled.div`
 `;
 
 export const TitleSection = styled.label`
-  color:#00ff80;
+  color: ${colorTitle};
   font-size: 20px;
   font-weight: 500;
 `;
@@ -56,15 +74,16 @@ export const ContentSection = styled.div`
   overflow: scroll;
   overflow-x: hidden;
   margin-top: 10px;
+  padding-top: 5px;
 `;
 
 export const OptionLabelLine = styled.label`
-  background-color: #171313;
-  color: #b4b6b7;
+  background-color: ${colorOptionBg};
+  color: ${colorTextOption};
   margin: auto;
   font-size: 15px;
   padding: 3px;
-  border-radius: 5px;
+  border-radius: 10px;
   min-height: 21px;
   width: 87%;
   text-align: center;
@@ -73,12 +92,15 @@ export const OptionLabelLine = styled.label`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  -webkit-box-shadow: 1px 0px 5px 3px ${colorShadow};
+  -moz-box-shadow: 1px 0px 5px 3px ${colorShadow};
+  box-shadow: 1px 0px 5px 3px ${colorShadow};
   &:hover {
-    color: #ffffff;
+    color: ${colorTextOpHover};
   }
   &:active {
-    background-color: #004cff;
-    color: #ffffff;
+    background-color: ${colorOpActiveBg};
+    color: ${colorTextOpActive};
   }
 `;
 
@@ -87,7 +109,7 @@ export const ContentSectionCircle = styled.div`
   margin-left: 10px;
   background-color: transparent;
   border-radius: 5px;
-  height: 150px;
+  height: 250px;
   overflow: scroll;
   overflow-x: hidden;
   margin-top: 10px;
@@ -98,10 +120,10 @@ export const ContentSectionCircle = styled.div`
   justify-content: center;
 `;
 
-export const OptionLabelCircle = styled.label`
-  background-color: #232121;
-  color: #b4b6b7;
-  margin: auto 3px;
+export var OptionLabelCircle = styled.label`
+  background-color: ${colorOptionBg};
+  color: ${colorTextOption};
+  margin: auto 6px;
   font-size: 20px;
   padding: 2px;
   border-radius: 10px;
@@ -114,11 +136,28 @@ export const OptionLabelCircle = styled.label`
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-box-shadow: 1px 0px 5px 3px ${colorShadow};
+  -moz-box-shadow: 1px 0px 5px 3px ${colorShadow};
+  box-shadow: 1px 0px 5px 3px ${colorShadow};
   &:hover {
-    color: #ffffff;
+    color: ${colorTextOpHover};
   }
-  &:active {
-    background-color: #004cfe;
-    color: #ffffff;
-  }
+ /* &:active {
+    background-color: ${colorOpActiveBg};
+    color: ${colorTextOpActive};
+  }*/
+
+  ${(props) => {
+    switch (props.$modClick) {
+      case "click":
+        return css`
+          background-color: ${colorOpActiveBg};
+          color: ${colorTextOpActive};
+        `;
+      default:
+        return css`
+          background-color: ${colorOptionBg};
+        `;
+    }
+  }}
 `;
