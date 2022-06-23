@@ -109,7 +109,7 @@ export const ContentSectionCircle = styled.div`
   margin-left: 10px;
   background-color: transparent;
   border-radius: 5px;
-  height: 250px;
+  height: 280px;
   overflow: scroll;
   overflow-x: hidden;
   margin-top: 10px;
@@ -142,22 +142,10 @@ export var OptionLabelCircle = styled.label`
   &:hover {
     color: ${colorTextOpHover};
   }
- /* &:active {
+ &:active {
     background-color: ${colorOpActiveBg};
     color: ${colorTextOpActive};
-  }*/
+  }
 
-  ${(props) => {
-    switch (props.$modClick) {
-      case "click":
-        return css`
-          background-color: ${colorOpActiveBg};
-          color: ${colorTextOpActive};
-        `;
-      default:
-        return css`
-          background-color: ${colorOptionBg};
-        `;
-    }
-  }}
+
 `;

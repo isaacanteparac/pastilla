@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import {
   DivLeft,
@@ -12,9 +12,6 @@ import {
   OptionLabelCircle,
   ContentSectionCircle,
 } from "./styleLeft";
-
-import { IconCapsule } from "../Icons";
-import styled from "styled-components";
 
 const alphabet = [
   { id: 1, name: "a" },
@@ -42,19 +39,15 @@ const alphabet = [
   { id: 23, name: "w" },
   { id: 24, name: "x" },
   { id: 25, name: "y" },
-  { id: 26, name: "z" }
+  { id: 26, name: "z" },
 ];
 
 export default function ContentLeft() {
-  const [letter, setLetter] = useState("");
+  const [word, setword] = useState({ alphabet: "", symptom:"", fpharmaceutical: "", sales:"" });
+  const [symptomList, setSymptomsList] = useState([]);
+  const [fPharmaceuticalList, setFfPharmaceuticalList] = useState([]);
+  const [salesList, setSalesList] = useState([]);
 
-  
-
-  const clickStyled = () => {
-    OptionLabelCircle = styled(OptionLabelCircle)`
-      background-color: red;
-    `;
-  }
   return (
     <DivLeft>
       <DivLogo>
@@ -64,17 +57,74 @@ export default function ContentLeft() {
         <Section>
           <TitleSection>Busca un síntoma por su letra inicial</TitleSection>
           <ContentSectionCircle>
-            {
-              alphabet?.map((letter)=>(
-                <OptionLabelCircle $modClick="click" key={letter.id}  onClick={() => {
-                  setLetter(letter.name);}}>{letter.name}</OptionLabelCircle>
-              ))
-            }
-            
+            {alphabet?.map((letter) => (
+              <OptionLabelCircle
+                key={letter.id}
+                onClick={() => {
+                  setword({ alphabet: letter.name });
+                }}
+              >
+                {letter.name}
+              </OptionLabelCircle>
+            ))}
           </ContentSectionCircle>
         </Section>
         <Section>
-          <TitleSection>sintomas</TitleSection>
+          <TitleSection>Sintomas con la letra {word.alphabet}</TitleSection>
+          <ContentSection>
+            {symptomList?.map((symptom) => (
+              <OptionLabelLine
+                key={symptom.id}
+                onClick={() => {
+                  setword({ alphabet: symptom.name });
+                }}
+              >
+                {symptom.name}
+              </OptionLabelLine>
+            ))}
+          </ContentSection>
+        </Section>
+        <Section>
+          <TitleSection>Tipo de analgesicos</TitleSection>
+          <ContentSection>
+            {fPharmaceuticalList?.map((pharmaceutical) => (
+              <OptionLabelLine
+                key={pharmaceutical.id}
+                onClick={() => {
+                  setword({ fpharmaceutical: pharmaceutical.name });
+                }}
+              >
+                {pharmaceutical.name}
+              </OptionLabelLine>
+            ))}
+          </ContentSection>
+        </Section>
+        <Section>
+          <TitleSection>Formas de ventas</TitleSection>
+          <ContentSection>
+            {salesList?.map((sales) => (
+              <OptionLabelLine key={sales.id}  onClick={() => {
+                setword({ sales: sales.name });
+              }}>
+                {sales.name}
+              </OptionLabelLine>
+            ))}
+          </ContentSection>
+        </Section>
+        <Section>
+          <TitleSection>Formas de farmaceuticas</TitleSection>
+          <ContentSection>
+            {fPharmaceuticalList?.map((pharmaceuticalList) => (
+              <OptionLabelLine key={pharmaceuticalList.id}  onClick={() => {
+                setword({ fpharmaceutical: pharmaceuticalList.name });
+              }}>
+                {pharmaceuticalList.name}
+              </OptionLabelLine>
+            ))}
+          </ContentSection>
+        </Section>
+        <Section>
+          <TitleSection>Tipo {word.fpharmaceutical}</TitleSection>
           <ContentSection>
             <OptionLabelLine>
               dolor en articulaciones dolor en articulaciones dolor en
