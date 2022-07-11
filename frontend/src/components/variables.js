@@ -1,10 +1,11 @@
-/*export const colorComponent = "#171313";
+export const colorComponent = "#171313";
 export const colorTitle = "#fff";
 export const colorShadow = "#000";
 
 
 //LOGO
 export const colorTextLogo = "#000";
+export const lightTextLogo = "#004cff"
 
 //OPTIONS SELECT
 export const colorOptionBg = "#171313";
@@ -33,10 +34,10 @@ export const colorTextButton = "#ffffff";
 //doctor
 export const colorTextDoctor = "#fff";
 export const colorTextInfoDoctor = "#004cff";
-*/
 
 
 
+/*
 
 export const colorComponent = "#ffffff";
 export const colorTitle = "#000";
@@ -73,3 +74,4 @@ export const colorTextButton = "#ffffff";
 //doctor
 export const colorTextDoctor = "#ffb300";
 export const colorTextInfoDoctor = "#b4b6b7";
+*/

@@ -11,7 +11,10 @@ import {
   OptionLabelLine,
   OptionLabelCircle,
   ContentSectionCircle,
+  IconArrowBottom_
 } from "./styleLeft";
+
+
 
 const alphabet = [
   { id: 1, name: "a" },
@@ -43,10 +46,29 @@ const alphabet = [
 ];
 
 export default function ContentLeft() {
-  const [word, setword] = useState({ alphabet: "", symptom:"", fpharmaceutical: "", sales:"" });
+  const [word, setword] = useState({
+    alphabet: "",
+    symptom: "",
+    fpharmaceutical: "",
+    tmatter: "",
+    analgesic: "",
+    sales: "",
+    tpharma: "",
+  });
+  const [getContent, setGetContent] = useState(true);
   const [symptomList, setSymptomsList] = useState([]);
   const [fPharmaceuticalList, setFfPharmaceuticalList] = useState([]);
   const [salesList, setSalesList] = useState([]);
+  const [typePharmaList, setTypePharmaList] = useState([]);
+  const [typeMatterList, setTypeMatterList] = useState([]);
+
+  const openContent = () => {
+    if (getContent) {
+      setGetContent(false);
+    } else {
+      setGetContent(true);
+    }
+  };
 
   return (
     <DivLeft>
@@ -54,21 +76,32 @@ export default function ContentLeft() {
         <LabelLogo>Pastilla</LabelLogo>
       </DivLogo>
       <ContentLeftD>
+        {/*Busca un síntoma por su letra inicial*/}
         <Section>
-          <TitleSection>Busca un síntoma por su letra inicial</TitleSection>
-          <ContentSectionCircle>
-            {alphabet?.map((letter) => (
-              <OptionLabelCircle
-                key={letter.id}
-                onClick={() => {
-                  setword({ alphabet: letter.name });
-                }}
-              >
-                {letter.name}
-              </OptionLabelCircle>
-            ))}
-          </ContentSectionCircle>
+          <div onClick={openContent}>
+            <TitleSection>
+              Busca un síntoma por su letra inicial
+            </TitleSection>
+            <IconArrowBottom_ />
+          </div>
+
+          {getContent ? (
+            <ContentSectionCircle>
+              {alphabet?.map((letter) => (
+                <OptionLabelCircle
+                  key={letter.id}
+                  onClick={() => {
+                    setword({ alphabet: letter.name });
+                    openContent();
+                  }}
+                >
+                  {letter.name}
+                </OptionLabelCircle>
+              ))}
+            </ContentSectionCircle>
+          ) : null}
         </Section>
+        {/*Busca un síntoma por su letra seleccionada*/}
         <Section>
           <TitleSection>Sintomas con la letra {word.alphabet}</TitleSection>
           <ContentSection>
@@ -84,52 +117,100 @@ export default function ContentLeft() {
             ))}
           </ContentSection>
         </Section>
+        {/*tipo de analgesico(pastilla, inyeccion, suero,etc*/}
         <Section>
           <TitleSection>Tipo de analgesicos</TitleSection>
           <ContentSection>
-            {fPharmaceuticalList?.map((pharmaceutical) => (
+            {fPharmaceuticalList?.map((analgesic) => (
               <OptionLabelLine
-                key={pharmaceutical.id}
+                key={analgesic.id}
                 onClick={() => {
-                  setword({ fpharmaceutical: pharmaceutical.name });
+                  setword({ analgesic: analgesic.name });
                 }}
               >
-                {pharmaceutical.name}
+                {analgesic.name}
               </OptionLabelLine>
             ))}
           </ContentSection>
         </Section>
+        {/*formas de ventas*/}
         <Section>
           <TitleSection>Formas de ventas</TitleSection>
           <ContentSection>
             {salesList?.map((sales) => (
-              <OptionLabelLine key={sales.id}  onClick={() => {
-                setword({ sales: sales.name });
-              }}>
+              <OptionLabelLine
+                key={sales.id}
+                onClick={() => {
+                  setword({ sales: sales.name });
+                }}
+              >
                 {sales.name}
               </OptionLabelLine>
             ))}
           </ContentSection>
         </Section>
+        {/*formas farmaceuticAS(orales, nasales,etc) seleccion orales*/}
         <Section>
           <TitleSection>Formas de farmaceuticas</TitleSection>
           <ContentSection>
             {fPharmaceuticalList?.map((pharmaceuticalList) => (
-              <OptionLabelLine key={pharmaceuticalList.id}  onClick={() => {
-                setword({ fpharmaceutical: pharmaceuticalList.name });
-              }}>
+              <OptionLabelLine
+                key={pharmaceuticalList.id}
+                onClick={() => {
+                  setword({ fpharmaceutical: pharmaceuticalList.name });
+                }}
+              >
                 {pharmaceuticalList.name}
               </OptionLabelLine>
             ))}
           </ContentSection>
         </Section>
+        {/*tipo de formas farmaceuticAS material(solido, liquido, semisolido) seleccion solido*/}
         <Section>
           <TitleSection>Tipo {word.fpharmaceutical}</TitleSection>
           <ContentSection>
-            <OptionLabelLine>
-              dolor en articulaciones dolor en articulaciones dolor en
-              articulaciones
-            </OptionLabelLine>
+            {typeMatterList?.map((matter) => (
+              <OptionLabelLine
+                key={matter.id}
+                onClick={() => {
+                  setword({ tmatter: matter.name });
+                }}
+              >
+                {matter.name}
+              </OptionLabelLine>
+            ))}
+          </ContentSection>
+        </Section>
+        {/*tipo de farmaco(solido, oral) selecion tableta*/}
+        <Section>
+          <TitleSection>Tipo farmaco</TitleSection>
+          <ContentSection>
+            {typePharmaList?.map((pharma) => (
+              <OptionLabelLine
+                key={pharma.id}
+                onClick={() => {
+                  setword({ tpharma: pharma.name });
+                }}
+              >
+                {pharma.name}
+              </OptionLabelLine>
+            ))}
+          </ContentSection>
+        </Section>
+         {/*tipo de (capsula dura eetc))*/}
+         <Section>
+          <TitleSection>Medicamentos {word.pharma}</TitleSection>
+          <ContentSection>
+            {typePharmaList?.map((pharma) => (
+              <OptionLabelLine
+                key={pharma.id}
+                onClick={() => {
+                  setword({ tpharma: pharma.name });
+                }}
+              >
+                {pharma.name}
+              </OptionLabelLine>
+            ))}
           </ContentSection>
         </Section>
       </ContentLeftD>

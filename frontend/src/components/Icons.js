@@ -49,3 +49,13 @@ export const IconLogo = (props) => (
     />
   </svg>
 );
+
+
+export const IconArrowBottom = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} {...props}>
+  <path
+    fill="currentcolor"
+    d="M17.05 5.29a1.25 1.25 0 0 0-1.757.16L10 11.796 4.707 5.449a1.242 1.242 0 0 0-1.758-.156 1.246 1.246 0 0 0-.16 1.758l6.254 7.5c.234.285.586.449.957.449s.723-.164.957-.45l6.254-7.5a1.251 1.251 0 0 0-.16-1.76Zm0 0"
+  />
+</svg>
+)

@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { IconArrowBottom } from "../Icons";
+
 import {
   colorTitle,
   colorOpActiveBg,
@@ -63,6 +65,7 @@ export const TitleSection = styled.label`
   color: ${colorTitle};
   font-size: 20px;
   font-weight: 500;
+  margin-right: 5px;
 `;
 
 export const ContentSection = styled.div`
@@ -146,6 +149,12 @@ export var OptionLabelCircle = styled.label`
     background-color: ${colorOpActiveBg};
     color: ${colorTextOpActive};
   }
+`;
 
-
+export const IconArrowBottom_ = styled(IconArrowBottom)`
+    float: right;
+    position: relative;
+    right: 10px;
+    top: 5px;
+    color:${colorTextOption};
 `;
