@@ -1,5 +1,6 @@
 from flask import Flask
-
+#pip install flask
+#pip install mysql-connector-python
 app = Flask(__name__)
 
 @app.route('/')
