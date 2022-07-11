@@ -46,4 +46,10 @@
     ejemplo
         todos los medicamentos comerciales
         fin
+#INSTALL
+    xampp
+    python
+        pip install flask
+        pip install mysql-connector-python
+    
 ![Captura de pantalla 2022-06-11 180219](https://user-images.githubusercontent.com/69361351/173211984-67f93b32-44f9-467c-b700-d8f9d644ed8d.png)
