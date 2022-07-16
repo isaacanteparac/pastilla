@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {sqlConsult} from "../../helpers/crud.js"
+
 
 import {
   DivLeft,
@@ -15,37 +17,15 @@ import {
 } from "./styleLeft";
 
 
-
-const alphabet = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-  { id: 3, name: "c" },
-  { id: 4, name: "d" },
-  { id: 5, name: "e" },
-  { id: 6, name: "f" },
-  { id: 7, name: "g" },
-  { id: 8, name: "h" },
-  { id: 9, name: "i" },
-  { id: 10, name: "j" },
-  { id: 11, name: "k" },
-  { id: 12, name: "l" },
-  { id: 13, name: "m" },
-  { id: 14, name: "n" },
-  { id: 15, name: "o" },
-  { id: 16, name: "p" },
-  { id: 17, name: "q" },
-  { id: 18, name: "r" },
-  { id: 19, name: "s" },
-  { id: 20, name: "t" },
-  { id: 21, name: "u" },
-  { id: 22, name: "v" },
-  { id: 23, name: "w" },
-  { id: 24, name: "x" },
-  { id: 25, name: "y" },
-  { id: 26, name: "z" },
-];
-
 export default function ContentLeft() {
+  const [getContent, setGetContent] = useState(true);
+  const [symptomList, setSymptomsList] = useState([]);
+  const [fPharmaceuticalList, setFfPharmaceuticalList] = useState([]);
+  const [salesList, setSalesList] = useState([]);
+  const [typePharmaList, setTypePharmaList] = useState([]);
+  const [typeMatterList, setTypeMatterList] = useState([]);
+  const [alphabet, setAlphabet] = useState([])
+
   const [word, setword] = useState({
     alphabet: "",
     symptom: "",
@@ -55,12 +35,7 @@ export default function ContentLeft() {
     sales: "",
     tpharma: "",
   });
-  const [getContent, setGetContent] = useState(true);
-  const [symptomList, setSymptomsList] = useState([]);
-  const [fPharmaceuticalList, setFfPharmaceuticalList] = useState([]);
-  const [salesList, setSalesList] = useState([]);
-  const [typePharmaList, setTypePharmaList] = useState([]);
-  const [typeMatterList, setTypeMatterList] = useState([]);
+
 
   const openContent = () => {
     if (getContent) {
@@ -69,6 +44,17 @@ export default function ContentLeft() {
       setGetContent(true);
     }
   };
+
+  const getDataAlphabet = async() =>{
+    const data = await sqlConsult("ctlg/alphabet");
+    setAlphabet(data);
+  }
+
+
+  useEffect(()=>{
+    getDataAlphabet();
+  },[]);
+
 
   return (
     <DivLeft>

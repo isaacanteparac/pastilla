@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_mysqldb import MySQL
 
 
@@ -7,11 +7,6 @@ from flask_mysqldb import MySQL
 
 #flask run
 app = Flask(__name__)
-
-user = "universidad"
-password = "universidad"
-nameDB = "pastilla"
-
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'universidad'
@@ -26,17 +21,21 @@ mysql = MySQL(app)
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/alphabet')
+@app.route('/i/ctlg/alphabet')
 def getAlphabet():
     try:
         cursor = mysql.connection.cursor()
         sql = "SELECT * FROM ctlg_alphabet"
         cursor.execute(sql)
         data = cursor.fetchall()
-        print(data)
-        return "ok"
+        jsson = []
+        for row in data:
+            d = {"id":row[0], "name":row[1]}
+            jsson.append(d)
+        return jsonify(jsson)
+
     except Exception as ex:
-        return "error"
+        return jsonify({"message":"error"})
 
 
 
