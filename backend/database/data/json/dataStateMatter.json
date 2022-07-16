@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "solido"
+    },
+    {
+        "id":2,
+        "name": "semi-solido"
+    },
+    {
+        "id":3,
+        "name": "liquido"
+    }
+]
