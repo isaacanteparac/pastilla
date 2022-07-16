@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "capsulas",
+        "type": null,
+        "id_ctlg_pharmaceutical_forms": null,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 2,
+        "name": "capsula dura",
+        "type": 1,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 3,
+        "name": "capsula blanda",
+        "type": 1,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 1
+    }
+]

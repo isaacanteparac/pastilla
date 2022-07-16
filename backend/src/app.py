@@ -38,6 +38,88 @@ def getAlphabet():
         return jsonify({"message":"error"})
 
 
+@app.route('/i/ctlg/recipe')
+def getRecipe():
+    try:
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_recipe"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id":row[0], "name":row[1]}
+            jsson.append(d)
+        return jsonify(jsson)
+
+    except Exception as ex:
+        return jsonify({"message":"error"})
+
+@app.route('/i/ctlg/sales')
+def getSales():
+    try:
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_sales"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id":row[0], "name":row[1]}
+            jsson.append(d)
+        return jsonify(jsson)
+
+    except Exception as ex:
+        return jsonify({"message":"error"})
+
+@app.route('/i/ctlg/state+matter')
+def getStateMatter():
+    try:
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_state_matter"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id":row[0], "name":row[1]}
+            jsson.append(d)
+        return jsonify(jsson)
+
+    except Exception as ex:
+        return jsonify({"message":"error"})
+
+
+@app.route('/i/ctlg/type+pharma')
+def getTypePharma():
+    try:
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_type_pharma"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id":row[0], "name":row[1]}
+            jsson.append(d)
+        return jsonify(jsson)
+
+    except Exception as ex:
+        return jsonify({"message":"error"})
+
+@app.route('/i/ctlg/pharmaceutical+forms')
+def getPharmaceuticalForms():
+    try:
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_pharmaceutical_forms"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id":row[0], "name":row[1]}
+            jsson.append(d)
+        return jsonify(jsson)
+
+    except Exception as ex:
+        return jsonify({"message":"error"})
+
+
 
 def noData(error):
     return "<h1>NO DATA TO DISPLAY HAS BEEN FOUND 🥲</h1>"

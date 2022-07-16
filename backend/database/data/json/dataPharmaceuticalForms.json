@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "orales"
+    },
+    {
+        "id": 2,
+        "name": "parentales"
+    },
+    {
+        "id": 3,
+        "name": "nasales"
+    },
+    {
+        "id": 4,
+        "name": "inhalacion"
+    },
+    {
+        "id":5,
+        "name": "oftalmicas"
+    },
+    {
+        "id":6,
+        "name": "rectales"
+    },
+    {
+        "id": 7,
+        "name": "vaginales"
+    },
+    {
+        "id": 8,
+        "name": "cutaneas"
+    }
+]
