@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "capsulas",
-        "type": null,
+        "type": 1,
         "id_ctlg_pharmaceutical_forms": null,
         "id_ctlg_state_matter": null
     },
@@ -17,7 +17,126 @@
         "id": 3,
         "name": "capsula blanda",
         "type": 1,
-        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 4,
+        "name": "capsula gastrorresistente",
+        "type": 1,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 5,
+        "name": "capsula de liberacion prolongada",
+        "type": 1,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 6,
+        "name": "sello",
+        "type": 1,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 7,
+        "name": "perla",
+        "type": 1,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 8,
+        "name": "oblea",
+        "type": 1,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 9,
+        "name": "tabletas/comprimidos",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": null,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 10,
+        "name": "tabletas/comprimidos no recubierto",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 11,
+        "name": "tabletas/comprimidos recubierto",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 12,
+        "name": "tabletas/comprimidos efervescente",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 13,
+        "name": "tabletas/comprimidos soluble",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 14,
+        "name": "tabletas/comprimidos dispersable",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 15,
+        "name": "tabletas/comprimido gastrorresistente",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 16,
+        "name": "tabletas/comprimido de liberacion prolongada",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 17,
+        "name": "tabletas/comprimido sublingual",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 18,
+        "name": "tabletas/comprimido para chupar",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 19,
+        "name": "tabletas/comprimido masticable",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 20,
+        "name": "tabletas/comprimido muco-adhesivo",
+        "type": 2,
+        "id_ctlg_pharmaceutical_forms": 1,
         "id_ctlg_state_matter": 1
     }
 ]
