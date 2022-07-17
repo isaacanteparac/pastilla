@@ -47,35 +47,22 @@
         todos los medicamentos comerciales
         fin
 
-# INSTALL
+**INSTALL**
 
-xampp
+- [Xampp 8.1.6](https://www.apachefriends.org/es/download.html)
+- [Python 3.10.4](https://www.python.org/downloads/)
+- [pip install flask](https://pypi.org/project/Flask/)
+- [pip install flask_mysqldb](https://pypi.org/project/Flask-MySQLdb/)
 
-python
+**URLS**
 
-🧩pip install flask
+- GET catalogo de alphabet http://127.0.0.1:5000/i/ctlg/alphabet
+- GET catalogo de recipe http://127.0.0.1:5000/i/ctlg/recipe
+- GET catalogo de sales http://127.0.0.1:5000/i/ctlg/sales
+- GET catalogo de state matter http://127.0.0.1:5000/i/ctlg/state+matter
+- GET catalogo de pharmaceutical forms http://127.0.0.1:5000/i/ctlg/pharmaceutical+forms
+- GET catalogo de type pharma http://127.0.0.1:5000/i/ctlg/type+pharma
 
-🧩pip install mysql-connector-python
-
-# URLS
-
-GET catalogo de alphabet 
-http://127.0.0.1:5000/i/ctlg/alphabet
-
-GET catalogo de recipe 
-http://127.0.0.1:5000/i/ctlg/recipe
-
-GET catalogo de sales 
-http://127.0.0.1:5000/i/ctlg/sales
-
-GET catalogo de state matter 
-http://127.0.0.1:5000/i/ctlg/state+matter
-
-GET catalogo de type pharma 
-http://127.0.0.1:5000/i/ctlg/type+pharma
-
-GET catalogo de pharmaceutical forms 
-http://127.0.0.1:5000/i/ctlg/pharmaceutical+forms
 
 
 
