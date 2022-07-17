@@ -66,3 +66,8 @@
 **IMPORT DATA TO THE DATABASE**
 - Json
 - CSV
+
+**EXECUTION OF THE BACK-END**
+- Ingresar al folder backend
+- Luego al folder src
+- Escribir en la consola lo siguiente flask run
