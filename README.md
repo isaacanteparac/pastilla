@@ -63,10 +63,6 @@
 - GET catalogo de pharmaceutical forms http://127.0.0.1:5000/i/ctlg/pharmaceutical+forms
 - GET catalogo de type pharma http://127.0.0.1:5000/i/ctlg/type+pharma
 
-
-
-
-
-
-    
-![Captura de pantalla 2022-06-11 180219](https://user-images.githubusercontent.com/69361351/173211984-67f93b32-44f9-467c-b700-d8f9d644ed8d.png)
+**IMPORT DATA TO THE DATABASE**
+- Json
+- CSV
