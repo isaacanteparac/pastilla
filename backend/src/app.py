@@ -1,11 +1,6 @@
 from flask import Flask, jsonify
 from flask_mysqldb import MySQL
 
-
-#pip install flask
-#pip install flask_mysqldb
-
-#flask run
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
@@ -87,22 +82,6 @@ def getStateMatter():
         return jsonify({"message":"error"})
 
 
-@app.route('/i/ctlg/type+pharma')
-def getTypePharma():
-    try:
-        cursor = mysql.connection.cursor()
-        sql = "SELECT * FROM ctlg_type_pharma"
-        cursor.execute(sql)
-        data = cursor.fetchall()
-        jsson = []
-        for row in data:
-            d = {"id":row[0], "name":row[1]}
-            jsson.append(d)
-        return jsonify(jsson)
-
-    except Exception as ex:
-        return jsonify({"message":"error"})
-
 @app.route('/i/ctlg/pharmaceutical+forms')
 def getPharmaceuticalForms():
     try:
@@ -121,10 +100,23 @@ def getPharmaceuticalForms():
 
 
 
-def noData(error):
-    return "<h1>NO DATA TO DISPLAY HAS BEEN FOUND 🥲</h1>"
+@app.route('/i/ctlg/type+pharma')
+def getTypePharma():
+    try:
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_type_pharma"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id":row[0], "name":row[1]}
+            jsson.append(d)
+        return jsonify(jsson)
+
+    except Exception as ex:
+        return jsonify({"message":"error"})
+
 
 
 if __name__ == "__main__":
-    app.register_error_handler(404, noData)
     app.run(debug=True)

@@ -3,8 +3,8 @@
         "id": 1,
         "name": "capsulas",
         "type": 1,
-        "id_ctlg_pharmaceutical_forms": null,
-        "id_ctlg_state_matter": null
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
     },
     {
         "id": 2,
@@ -138,5 +138,148 @@
         "type": 2,
         "id_ctlg_pharmaceutical_forms": 1,
         "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 21,
+        "name": "gomas de mascar medicamentosas",
+        "type": 3,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 22,
+        "name": "goma masticable",
+        "type": 3,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 23,
+        "name": "polvos de uso oral",
+        "type": 4,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 24,
+        "name": "polvo",
+        "type": 4,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 25,
+        "name": "polvo para suspension oral",
+        "type": 4,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 26,
+        "name": "polvo para solucion oral",
+        "type": 4,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 27,
+        "name": "granuladas",
+        "type": 5,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 28,
+        "name": "granulados efervescentes",
+        "type": 5,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 29,
+        "name": "granulados recubiertos",
+        "type": 5,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 30,
+        "name": "granulados gastrorresistentes",
+        "type": 5,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 31,
+        "name": "granulados de liberacion prolongada",
+        "type": 5,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 32,
+        "name": "f.f semisolidas orales",
+        "type": 6,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 33,
+        "name": "gel",
+        "type": 6,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 34,
+        "name": "jalea",
+        "type": 6,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 32,
+        "name": "f.f liquidas orales",
+        "type": 7,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 33,
+        "name": "jarabe",
+        "type": 7,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 34,
+        "name": "elixir",
+        "type": 7,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 35,
+        "name": "emulsiones",
+        "type": 7,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 36,
+        "name": "solucion",
+        "type": 7,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 37,
+        "name": "suspension",
+        "type": 7,
+        "id_ctlg_pharmaceutical_forms": 1,
+        "id_ctlg_state_matter": 3
     }
+
+
+
 ]
