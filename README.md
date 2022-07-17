@@ -56,5 +56,30 @@ python
 🧩pip install flask
 
 🧩pip install mysql-connector-python
+
+# URLS
+
+GET catalogo de alphabet 
+http://127.0.0.1:50008/i/ctlg/alphabet
+
+GET catalogo de recipe 
+http://127.0.0.1:50008/i/ctlg/recipe
+
+GET catalogo de sales 
+http://127.0.0.1:50008/i/ctlg/sales
+
+GET catalogo de state matter 
+http://127.0.0.1:50008/i/ctlg/state+matter
+
+GET catalogo de type pharma 
+http://127.0.0.1:50008/i/ctlg/type+pharma
+
+GET catalogo de pharmaceutical forms 
+http://127.0.0.1:50008/i/ctlg/pharmaceutical+forms
+
+
+
+
+
     
 ![Captura de pantalla 2022-06-11 180219](https://user-images.githubusercontent.com/69361351/173211984-67f93b32-44f9-467c-b700-d8f9d644ed8d.png)
