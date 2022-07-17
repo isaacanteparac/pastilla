@@ -60,22 +60,22 @@ python
 # URLS
 
 GET catalogo de alphabet 
-http://127.0.0.1:50008/i/ctlg/alphabet
+http://127.0.0.1:5000/i/ctlg/alphabet
 
 GET catalogo de recipe 
-http://127.0.0.1:50008/i/ctlg/recipe
+http://127.0.0.1:5000/i/ctlg/recipe
 
 GET catalogo de sales 
-http://127.0.0.1:50008/i/ctlg/sales
+http://127.0.0.1:5000/i/ctlg/sales
 
 GET catalogo de state matter 
-http://127.0.0.1:50008/i/ctlg/state+matter
+http://127.0.0.1:5000/i/ctlg/state+matter
 
 GET catalogo de type pharma 
-http://127.0.0.1:50008/i/ctlg/type+pharma
+http://127.0.0.1:5000/i/ctlg/type+pharma
 
 GET catalogo de pharmaceutical forms 
-http://127.0.0.1:50008/i/ctlg/pharmaceutical+forms
+http://127.0.0.1:5000/i/ctlg/pharmaceutical+forms
 
 
 
