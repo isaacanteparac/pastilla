@@ -561,10 +561,119 @@
         "type": 21,
         "id_ctlg_pharmaceutical_forms": 4,
         "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 79,
+        "name": "f.f oftalmicas liquidas",
+        "type": 22,
+        "id_ctlg_pharmaceutical_forms": 5,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 80,
+        "name": "colirio en solucion",
+        "type": 22,
+        "id_ctlg_pharmaceutical_forms": 5,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 81,
+        "name": "colirio en suspension",
+        "type": 22,
+        "id_ctlg_pharmaceutical_forms": 5,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 82,
+        "name": "f.f oftalmicas semisolidas",
+        "type": 23,
+        "id_ctlg_pharmaceutical_forms": 5,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 83,
+        "name": "gel oftalmico",
+        "type": 23,
+        "id_ctlg_pharmaceutical_forms": 5,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 84,
+        "name": "unguento oftalmico",
+        "type": 23,
+        "id_ctlg_pharmaceutical_forms": 5,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 85,
+        "name": "f.f rectales solidas",
+        "type": 24,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 86,
+        "name": "supositorio",
+        "type": 24,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 87,
+        "name": "f.f rectales semisolidas",
+        "type": 25,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 88,
+        "name": "pomada",
+        "type": 25,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 89,
+        "name": "crema",
+        "type": 25,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 90,
+        "name": "gel rectal",
+        "type": 25,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 91,
+        "name": "jalea",
+        "type": 25,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 92,
+        "name": "f.f rectales liquidas",
+        "type": 26,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 93,
+        "name": "solucion rectal",
+        "type": 26,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 92,
+        "name": "emulsion rectales ",
+        "type": 26,
+        "id_ctlg_pharmaceutical_forms": 6,
+        "id_ctlg_state_matter": 3
     }
-
-
-
 
 
 
