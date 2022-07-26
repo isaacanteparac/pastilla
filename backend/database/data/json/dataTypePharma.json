@@ -4,7 +4,7 @@
         "name": "capsulas",
         "type": 1,
         "id_ctlg_pharmaceutical_forms": 1,
-        "id_ctlg_state_matter": 1
+        "id_ctlg_state_matter": null
     },
     {
         "id": 2,
@@ -59,7 +59,7 @@
         "id": 9,
         "name": "tabletas/comprimidos",
         "type": 2,
-        "id_ctlg_pharmaceutical_forms": null,
+        "id_ctlg_pharmaceutical_forms": 1,
         "id_ctlg_state_matter": null
     },
     {
@@ -144,7 +144,7 @@
         "name": "gomas de mascar medicamentosas",
         "type": 3,
         "id_ctlg_pharmaceutical_forms": 1,
-        "id_ctlg_state_matter": 1
+        "id_ctlg_state_matter": null
     },
     {
         "id": 22,
@@ -158,7 +158,7 @@
         "name": "polvos de uso oral",
         "type": 4,
         "id_ctlg_pharmaceutical_forms": 1,
-        "id_ctlg_state_matter": 1
+        "id_ctlg_state_matter": null
     },
     {
         "id": 24,
@@ -186,7 +186,7 @@
         "name": "granuladas",
         "type": 5,
         "id_ctlg_pharmaceutical_forms": 1,
-        "id_ctlg_state_matter": 1
+        "id_ctlg_state_matter": null
     },
     {
         "id": 28,
@@ -221,7 +221,7 @@
         "name": "f.f semisolidas orales",
         "type": 6,
         "id_ctlg_pharmaceutical_forms": 1,
-        "id_ctlg_state_matter": 2
+        "id_ctlg_state_matter": null
     },
     {
         "id": 33,
@@ -242,7 +242,7 @@
         "name": "f.f liquidas orales",
         "type": 7,
         "id_ctlg_pharmaceutical_forms": 1,
-        "id_ctlg_state_matter": 3
+        "id_ctlg_state_matter": null
     },
     {
         "id": 33,
@@ -278,7 +278,294 @@
         "type": 7,
         "id_ctlg_pharmaceutical_forms": 1,
         "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 38,
+        "name": "preparacion inyectables esteriles de pequeño/gran volumen",
+        "type": 8,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 39,
+        "name": "solucion inyectable",
+        "type": 8,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 40,
+        "name": "emulsion inyectable",
+        "type": 8,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 41,
+        "name": "suspension inyectable",
+        "type": 8,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 3
+
+    },
+    {
+        "id": 42,
+        "name": "suspension intratraqueal",
+        "type": 8,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 3
+
+    },
+    {
+        "id": 43,
+        "name": "soluccion para dialisis peritoneal",
+        "type": 8,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 3
+
+    },
+    {
+        "id": 44,
+        "name": "preparacion concentradas inyectables para perfusion",
+        "type": 9,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 45,
+        "name": "concentrado para solucion inyectable",
+        "type": 9,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 46,
+        "name": "polvos para inyectables o para perfusion",
+        "type": 10,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 47,
+        "name": "polvo para inyeccion",
+        "type": 10,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 48,
+        "name": "polvo para perfusion",
+        "type": 10,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 49,
+        "name": "implantes",
+        "type": 11,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 50,
+        "name": "implantes",
+        "type": 11,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 51,
+        "name": "gotas nasales y aerosoles nasales",
+        "type": 12,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 52,
+        "name": "gotas nasales",
+        "type": 12,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 53,
+        "name": "aerosoles nasales",
+        "type": 12,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 54,
+        "name": "liquido para lavado nasal",
+        "type": 13,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 55,
+        "name": "soluciones nasal",
+        "type": 13,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 56,
+        "name": "barras para uso nasal",
+        "type": 14,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 57,
+        "name": "barras",
+        "type": 14,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 58,
+        "name": "polvos nasales",
+        "type": 15,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 59,
+        "name": "polvos nasales",
+        "type": 15,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 60,
+        "name": "preparaciones nasales semisolidas",
+        "type": 16,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 61,
+        "name": "gel nasal",
+        "type": 16,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 62,
+        "name": "unguento nasal",
+        "type": 16,
+        "id_ctlg_pharmaceutical_forms": 3,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 63,
+        "name": "crema nasal|",
+        "type": 16,
+        "id_ctlg_pharmaceutical_forms": 2,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 65,
+        "name": "f.f liquidas para nebulizacion",
+        "type": 17,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 66,
+        "name": "solucion para nebulizacion",
+        "type": 17,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 67,
+        "name": "emulsion para nebulazacion",
+        "type": 17,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 68,
+        "name": "suspension para nebulazacion",
+        "type": 17,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 69,
+        "name": "f.f para lavado nasal",
+        "type": 18,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 70,
+        "name": "soluciones nasales",
+        "type": 18,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 71,
+        "name": "barras para uso nasal",
+        "type": 19,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 72,
+        "name": "barras",
+        "type": 19,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 73,
+        "name": "polvos nasales",
+        "type": 20,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 74,
+        "name": "polvos nasales",
+        "type": 20,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 75,
+        "name": "preparacion nasales semisolidas",
+        "type": 21,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 76,
+        "name": "gel nasal",
+        "type": 21,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 77,
+        "name": "unguento nasal",
+        "type": 21,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 78,
+        "name": "crema nasal",
+        "type": 21,
+        "id_ctlg_pharmaceutical_forms": 4,
+        "id_ctlg_state_matter": 2
     }
+
+
+
+
 
 
 
