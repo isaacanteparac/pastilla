@@ -72,3 +72,11 @@
     ejemplo
         todos los medicamentos comerciales
         fin
+
+**Type**
+- 1 = capsulass
+- 2 = tabletas/comprimidos
+- 3 = gomas de mascar medicadas
+- 4 = polvos para uso oral
+- 5 = granuladas
+- 6 = F.F semisolidas orales
