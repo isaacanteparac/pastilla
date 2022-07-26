@@ -95,3 +95,9 @@
 - 19 = barras para uso nasal
 - 20 = polvos nasales
 - 21 = preparacion nasales semisolidas
+- 22 = f.f oftalmicas liquidas
+- 23 = f.f oftalmicas semisolidas
+- 24 = f.f rectales solidas
+- 25 = f.f rectales semisolidas
+- 26 = f.f rectales liquidas
+- 27 = 
