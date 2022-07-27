@@ -100,4 +100,10 @@
 - 24 = f.f rectales solidas
 - 25 = f.f rectales semisolidas
 - 26 = f.f rectales liquidas
-- 27 = 
+- 27 = ovulos/capsulas
+- 28 = tabletas/comprimido vaginales
+- 29 = f.f vaginales semisolidas
+- 30 = f.f vaginales liquidas
+- 31 = f.f cutaneas liquidas
+- 32 = f.f cutaneas semisolidas
+- 33 = f.f cutaneas solidas
