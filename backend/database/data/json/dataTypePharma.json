@@ -673,9 +673,187 @@
         "type": 26,
         "id_ctlg_pharmaceutical_forms": 6,
         "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 93,
+        "name": "ovulos/capsulas",
+        "type": 27,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 94,
+        "name": "ovulo",
+        "type": 27,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 95,
+        "name": "capsula vaginal",
+        "type": 27,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 96,
+        "name": "tabletas/comprimido vaginales",
+        "type": 28,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 97,
+        "name": "tableta/comprimido vaginal",
+        "type": 28,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 1
+    },
+    {
+        "id": 98,
+        "name": "f.f vaginales semisolidas",
+        "type": 29,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 99,
+        "name": "gel vaginal",
+        "type": 29,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 100,
+        "name": "crema vaginal",
+        "type": 29,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 101,
+        "name": "pomada vaginal",
+        "type": 29,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 102,
+        "name": "f.f vaginales liquidas",
+        "type": 30,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 103,
+        "name": "solucion vaginal",
+        "type": 30,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 104,
+        "name": "emulsion vaginal",
+        "type": 30,
+        "id_ctlg_pharmaceutical_forms": 7,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 105,
+        "name": "f.f cutaneas liquidas",
+        "type": 31,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 106,
+        "name": "champu",
+        "type": 31,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 107,
+        "name": "locion",
+        "type": 31,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 108,
+        "name": "emulsion (linimento)",
+        "type": 31,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 109,
+        "name": "solucion",
+        "type": 31,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 3
+    },
+    {
+        "id": 110,
+        "name": "f.f cutaneas semisolidas",
+        "type": 32,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 111,
+        "name": "pomada",
+        "type": 32,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 112,
+        "name": "pomada",
+        "type": 32,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 113,
+        "name": "crema",
+        "type": 32,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 114,
+        "name": "gel",
+        "type": 32,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 115,
+        "name": "pasta",
+        "type": 32,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 116,
+        "name": "jaleas",
+        "type": 32,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 2
+    },
+    {
+        "id": 117,
+        "name": "f.f cutaneas solidas",
+        "type": 33,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": null
+    },
+    {
+        "id": 118,
+        "name": "parche transdermico",
+        "type": 33,
+        "id_ctlg_pharmaceutical_forms": 8,
+        "id_ctlg_state_matter": 1
     }
-
-
-
-
 ]
