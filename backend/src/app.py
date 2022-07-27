@@ -1,4 +1,5 @@
-from flask import Flask, jsonify
+
+from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
@@ -116,7 +117,11 @@ def getTypePharma():
     except Exception as ex:
         return jsonify({"message":"error"})
 
-
+@app.route('/medicinas')
+def medicineSearch():
+    data = request.get_json()
+    symptom = data["id_ctlg_symptom"]
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run(debug=True)
