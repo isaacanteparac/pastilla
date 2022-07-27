@@ -122,6 +122,17 @@ def medicineSearch():
     data = request.get_json()
     symptom = data["id_ctlg_symptom"]
     return jsonify(data)
+"""
+postman  consulta get http://127.0.0.1:5000/medicinas
+{
+    "id_ctlg_symptom": 1,
+    "id_ctlg_recipe": 2,
+    "id_ctlg_sales":3,
+    "id_ctlg_state_matter":666,
+    "id_ctlg_pharmaceutical_forms": 5,
+    "id_ctlg_type_pharma":6
+}
+"""
 
 if __name__ == "__main__":
     app.run(debug=True)
