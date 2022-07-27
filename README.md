@@ -4,11 +4,13 @@
 
 - [Xampp 8.1.6](https://www.apachefriends.org/es/download.html)
 - [Python 3.10.4](https://www.python.org/downloads/)
+- [Postman](https://www.postman.com/downloads/)
 - [pip install flask](https://pypi.org/project/Flask/)
 - [pip install flask_mysqldb](https://pypi.org/project/Flask-MySQLdb/)
 
 **URLS**
 
+- GET medicines http://127.0.0.1:5000/medicinas
 - GET catalogo de alphabet http://127.0.0.1:5000/i/ctlg/alphabet
 - GET catalogo de recipe http://127.0.0.1:5000/i/ctlg/recipe
 - GET catalogo de sales http://127.0.0.1:5000/i/ctlg/sales
