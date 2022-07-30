@@ -121,6 +121,12 @@ def getTypePharma():
 def medicineSearch():
     data = request.get_json()
     symptom = data["id_ctlg_symptom"]
+    recipe = data["id_ctlg_recipe"]
+    sales = data["id_ctlg_state_matter"]
+    pharmaceutical_forms = data["id_ctlg_pharmaceutical_forms"]
+    type_pharma = data["id_ctlg_type_pharj"]
+
+        
     return jsonify(data)
 """
 postman  consulta get http://127.0.0.1:5000/medicinas
