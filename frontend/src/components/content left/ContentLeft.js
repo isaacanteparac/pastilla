@@ -48,6 +48,7 @@ export default function ContentLeft() {
   const getDataAlphabet = async() =>{
     const data = await sqlConsult("ctlg/alphabet");
     setAlphabet(data);
+    
   }
 
 
