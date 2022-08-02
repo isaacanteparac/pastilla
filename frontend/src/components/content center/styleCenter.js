@@ -12,7 +12,7 @@ export const DivCenter = styled.div`
   width: 60%;
   height: 100%;
   position: relative;
-  left: 20%;
+  left: 25%;
   background-color: transparent;
   display: flex;
   flex-wrap: wrap;

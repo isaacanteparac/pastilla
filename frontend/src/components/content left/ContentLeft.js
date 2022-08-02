@@ -46,9 +46,32 @@ export default function ContentLeft() {
   };
 
   const getDataAlphabet = async() =>{
-    const data = await sqlConsult("ctlg/alphabet");
-    setAlphabet(data);
-    
+    fetch('http://127.0.0.1:5000/i/ctlg/alphabet',{
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+        },
+      })
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        setAlphabet(data)
+      })
+
+
+  }
+
+  const getDataSymptom = async() =>{
+    fetch('http://127.0.0.1:5000/i/ctlg/symptom')
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        setSymptomsList(data)
+      })
+
+
   }
 
 

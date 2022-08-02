@@ -9,7 +9,7 @@ function App() {
     <>
       <ContentLeft />
       <ContentCenter />
-      <ContentRight />
+      {/*<ContentRight />*/ }
     </>
   );
 }

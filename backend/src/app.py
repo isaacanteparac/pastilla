@@ -125,6 +125,24 @@ def getTypePharma():
         return jsonify({"message": "error"})
 
 
+@app.route('/i/ctlg/symptom')
+def getSymptom():
+    try:
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_symptom"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id": row[0], "name": row[1], "create_": row[2],
+                 "update_": row[3], "delete_": row[4]}
+            jsson.append(d)
+        return jsonify(jsson)
+
+    except Exception as ex:
+        return jsonify({"message": "error"})
+
+
 @app.route('/i/ctlg/medicines')
 def getMedicine():
     try:
@@ -168,7 +186,6 @@ def medicineSearch():
             return jsonify([medicine])
         else:
             return jsonify({"message": "no se encontro medicamento"})
-
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ USE pastilla;
 CREATE TABLE medicine(
     id INT(11) NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
-    description MEDIUMTEXT NOT NULL,
+    description LONGTEXT NOT NULL,
     id_ctlg_sales INT(11),
     id_ctlg_recipe INT(11),
     id_ctlg_symptom INT(11),
