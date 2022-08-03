@@ -74,7 +74,7 @@ def getIdSymptom(id):
         for medicine in allData['medicine']:
             if(idSymptom == medicine["id_ctlg_symptom"]):
                 am.append(medicine)
-                print(f"simtomas {medicine}")
+                print(am)
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -111,7 +111,7 @@ def getIdSales(id):
         for medicine in allData['medicine']:
             if(idSales == medicine["id_ctlg_sales"]):
                 am.append(medicine)
-                print(f"sales {medicine}")
+                print(am)
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -144,12 +144,11 @@ def getIdRecipe(id):
     global allData
     try:
         idRecipe = int(id)
-        print(idRecipe)
         am = []
         for medicine in allData['medicine']:
             if(idRecipe == medicine["id_ctlg_recipe"]):
                 am.append(medicine)
-                print(f"recipe {medicine}")
+                print(am)
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -158,7 +157,7 @@ def getIdRecipe(id):
 #-----------------------------------------------
 
 
-#
+#-------------TITLE: PHARMACEUTICAL FORMS----------
 @app.route('/i/ctlg/pharmaceutical+forms')
 def getPharmaceuticalForms():
     try:
@@ -176,6 +175,22 @@ def getPharmaceuticalForms():
     except Exception as ex:
         return jsonify({"message": "error"})
 
+@app.route('/i/query/pharmaceutical+forms/<id>')
+def getIdPharmaceuticalForms(id):
+    global allData
+    try:
+        idPharmaceuticalForms = int(id)
+        am = []
+        for medicine in allData['medicine']:
+            if(idPharmaceuticalForms == medicine["id_ctlg_pharmaceutical_forms"]):
+                am.append(medicine)
+                print(am)
+        allData = {"medicine": am}
+    except Exception as ex:
+        return jsonify({"message": "error"})
+    finally:
+        return jsonify(allData)
+#----------------------------------------------------
 
 @app.route('/i/ctlg/state+matter')
 def getStateMatter():
