@@ -293,37 +293,6 @@ def getMedicine():
         return jsonify({"message": "error"})
 
 
-@app.route('/medicinas')
-def medicineSearch():
-    data = request.get_json()
-    symptom = data["id_ctlg_symptom"]
-    recipe = data["id_ctlg_recipe"]
-    sales = data["id_ctlg_sales"]
-    state_matter = data["id_ctlg_state_matter"]
-    pharmaceutical_forms = data["id_ctlg_pharmaceutical_forms"]
-    type_pharma = data["id_ctlg_type_pharma"]
-
-    cursor = mysql.connection.cursor()
-    sql = "SELECT * FROM medicine"
-    cursor.execute(sql)
-    data = cursor.fetchall()
-    jsson = []
-    for row in data:
-        d = {"id": row[0], "name": row[1], "description": row[2], "id_ctlg_sales": row[3],
-             "id_ctlg_recipe": row[4], "id_ctlg_symptom": row[5], "id_ctlg_state_matter": row[6], "id_ctlg_pharmaceutical_forms": row[7],
-             "id_ctlg_type_pharma": row[8], "create_": row[9], "update_": row[10], "delete_": row[11]}
-        print(d)
-        if(symptom == d["id_ctlg_symptom"]):
-            jsson.append(d)
-    allMedicine = {"medicine": jsson}
-    for medicine in allMedicine['medicine']:
-        if((recipe == medicine["id_ctlg_recipe"]) and (sales == medicine["id_ctlg_sales"]) and
-           (state_matter == medicine["id_ctlg_state_matter"]) and (pharmaceutical_forms == medicine["id_ctlg_pharmaceutical_forms"]) and
-                (type_pharma == medicine["id_ctlg_type_pharma"])):
-            return jsonify([medicine])
-        else:
-            return jsonify({"message": "no se encontro medicamento"})
-
 
 def divMedicine():
     cursor = mysql.connection.cursor()
