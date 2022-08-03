@@ -11,8 +11,7 @@ app.config['MYSQL_PASSWORD'] = 'universidad'
 app.config['MYSQL_DB'] = 'pastilla'
 mysql = MySQL(app)
 
-#variables
-alphabetSymptom = 0
+allData = {}
 
 
 @app.route('/')
@@ -128,29 +127,34 @@ def getTypePharma():
         return jsonify({"message": "error"})
 
 
-@app.route('/i/ctlg/symptom', methods=["GET", "POST"])
-def getSymptom():
-    global alphabetSymptom
-    if(request.method == "GET"):
-        try:
-            cursor = mysql.connection.cursor()
-            sql = "SELECT * FROM ctlg_symptom"
-            cursor.execute(sql)
-            data = cursor.fetchall()
-            jsson = []
-            for row in data:
-                d = {"id": row[0], "name": row[1], "id_ctlg_alphabet":row[2],"create_": row[3],
+@app.route('/i/ctlg/symptom/<letter>')
+def getSymptom(letter):
+    global allData
+    try:
+        letterAlphabet = int(letter)
+        cursor = mysql.connection.cursor()
+        sql = "SELECT * FROM ctlg_symptom"
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        jsson = []
+        for row in data:
+            d = {"id": row[0], "name": row[1], "id_ctlg_alphabet": row[2], "create_": row[3],
                  "update_": row[4], "delete_": row[5]}
-                id_ctlg_alphabet =  row[2]
-                print(f" ctlg {id_ctlg_alphabet}")
+            n = int(d["id_ctlg_alphabet"])
+            if(letterAlphabet == n):
                 jsson.append(d)
-            return jsonify(jsson)
-
-        except Exception as ex:
-            return jsonify({"message": "error"})
-    else:
-        alphabetSymptom = request.form.get('id')
-
+    except Exception as ex:
+        return jsonify({"message": "error"})
+    finally:
+        dm = divMedicine()
+        am = []
+        allData = {"medicine": dm}
+        for medicine in allData['medicine']:
+            if(letterAlphabet == medicine["id_ctlg_symptom"]):
+                am.append(medicine)
+        allData = {"medicine": am}
+        print(allData)
+        return jsonify(jsson)
 
 
 @app.route('/i/ctlg/medicines')
@@ -203,5 +207,24 @@ def medicineSearch():
             return jsonify({"message": "no se encontro medicamento"})
 
 
+def divMedicine():
+    cursor = mysql.connection.cursor()
+    sql = "SELECT * FROM medicine"
+    cursor.execute(sql)
+    data = cursor.fetchall()
+    jsson = []
+    for row in data:
+        d = {"id": row[0], "name": row[1], "description": row[2], "id_ctlg_sales": row[3],
+             "id_ctlg_recipe": row[4], "id_ctlg_symptom": row[5], "id_ctlg_state_matter": row[6], "id_ctlg_pharmaceutical_forms": row[7],
+             "id_ctlg_type_pharma": row[8], "create_": row[9], "update_": row[10], "delete_": row[11]}
+        jsson.append(d)
+    return jsson
+
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+# la automatizacin es un conjunto de pruebas
+# LOS DIFERENTES ESTANDARES DE SOFTWARE ENFOCADO EN LA CALIDAD
+# EN LISTAR
