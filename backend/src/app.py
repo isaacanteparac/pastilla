@@ -73,8 +73,8 @@ def getIdSymptom(id):
         for medicine in allData['medicine']:
             if(idSymptom == medicine["id_ctlg_symptom"]):
                 am.append(medicine)
-
-        allData = {"medicine": am}
+        if(len(am) > 0):
+            allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
     finally:
@@ -110,8 +110,8 @@ def getIdSales(id):
         for medicine in allData['medicine']:
             if(idSales == medicine["id_ctlg_sales"]):
                 am.append(medicine)
-
-        allData = {"medicine": am}
+        if(len(am) > 0):
+            allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
     finally:
@@ -147,8 +147,8 @@ def getIdRecipe(id):
         for medicine in allData['medicine']:
             if(idRecipe == medicine["id_ctlg_recipe"]):
                 am.append(medicine)
-
-        allData = {"medicine": am}
+        if(len(am) > 0):
+            allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
     finally:
@@ -184,8 +184,8 @@ def getIdPharmaceuticalForms(id):
         for medicine in allData['medicine']:
             if(idPharmaceuticalForms == medicine["id_ctlg_pharmaceutical_forms"]):
                 am.append(medicine)
-
-        allData = {"medicine": am}
+        if(len(am) > 0):
+            allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
     finally:
@@ -221,8 +221,8 @@ def getIdStateMatter(id):
         for medicine in allData['medicine']:
             if(idStateMatter == medicine["id_ctlg_state_matter"]):
                 am.append(medicine)
-
-        allData = {"medicine": am}
+        if(len(am) > 0):
+            allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
     finally:
@@ -250,7 +250,6 @@ def getTypePharma():
                 d["id_ctlg_pharmaceutical_forms"])
             id_ctlg_state_matter = int(d["id_ctlg_state_matter"])
             if((pharmaceutical_forms == id_ctlg_pharmaceutical_forms) and (state_matter == id_ctlg_state_matter)):
-                print(d)
                 jsson.append(d)
         return jsonify(jsson)
 
@@ -267,13 +266,12 @@ def getIdTypePharma(id):
         for medicine in allData['medicine']:
             if(idTypePharma == medicine["id_ctlg_type_pharma"]):
                 am.append(medicine)
-
-        allData = {"medicine": am}
+        if(len(am) > 0):
+            allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
     finally:
         return jsonify(allData)
-
 # ---------------------------------------------------
 
 
@@ -313,6 +311,5 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-# la automatizacin es un conjunto de pruebas
-# LOS DIFERENTES ESTANDARES DE SOFTWARE ENFOCADO EN LA CALIDAD
-# EN LISTAR
+
+#input 2 2 2 2
