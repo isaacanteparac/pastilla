@@ -6,8 +6,11 @@ symptom = "http://127.0.0.1:5000/i/ctlg/symptom"
 sales = "http://127.0.0.1:5000/i/ctlg/sales"
 recipe = "http://127.0.0.1:5000/i/ctlg/recipe"
 pharmaceuticalForms = "http://127.0.0.1:5000/i/ctlg/pharmaceutical+forms"
+stateMatter = "http://127.0.0.1:5000/i/ctlg/state+matter"
 
 userInputAlphabet = 0
+userInputPharmaceuticalForms = 0
+userInputStateMatter = 0
 
 def getDB(url, text_):
     global userInputAlphabet
@@ -18,7 +21,7 @@ def getDB(url, text_):
     for data in alldata['data']:
         id_ = data["id"]
         name = data["name"]
-        print(f"> {id_} =  {name}")
+        print(f"    > {id_} =  {name}")
 
 
 
@@ -48,9 +51,16 @@ def ctlgRecipe(url):
 
 
 def ctlgPharmaceuticalForms(url):
+    global userInputPharmaceuticalForms
     getDB(url, "seleccione el tipo de forma farmaceutica")
     userInputPharmaceuticalForms = int(input("ingrese el numero de la opcion: "))
     requests.get(f"http://127.0.0.1:5000/i/query/pharmaceutical+forms/{userInputPharmaceuticalForms}")
+
+def ctlgStateMatter(url):
+    global userInputStateMatter
+    getDB(url, "seleccione el tipo de material")
+    userInputStateMatter = int(input("ingrese el numero de la opcion: "))
+    requests.get(f"http://127.0.0.1:5000/i/query/state+matter/{userInputStateMatter}")
 
 
 
@@ -61,5 +71,6 @@ def main():
     ctlgSales(sales)
     ctlgRecipe(recipe)
     ctlgPharmaceuticalForms(pharmaceuticalForms)
+    ctlgStateMatter(stateMatter)
 
 main()

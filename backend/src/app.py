@@ -192,6 +192,8 @@ def getIdPharmaceuticalForms(id):
         return jsonify(allData)
 #----------------------------------------------------
 
+
+#-----------TITLE:STATE MATTER----------------------
 @app.route('/i/ctlg/state+matter')
 def getStateMatter():
     try:
@@ -209,7 +211,22 @@ def getStateMatter():
     except Exception as ex:
         return jsonify({"message": "error"})
 
-
+@app.route('/i/query/state+matter/<id>')
+def getIdStateMatter(id):
+    global allData
+    try:
+        idStateMatter = int(id)
+        am = []
+        for medicine in allData['medicine']:
+            if(idStateMatter == medicine["id_ctlg_state_matter"]):
+                am.append(medicine)
+                print(am)
+        allData = {"medicine": am}
+    except Exception as ex:
+        return jsonify({"message": "error"})
+    finally:
+        return jsonify(allData)
+#---------------------------------------------------
 
 
 
