@@ -11,6 +11,9 @@ app.config['MYSQL_PASSWORD'] = 'universidad'
 app.config['MYSQL_DB'] = 'pastilla'
 mysql = MySQL(app)
 
+#variables
+alphabetSymptom = 0
+
 
 @app.route('/')
 def hello_world():
@@ -125,22 +128,29 @@ def getTypePharma():
         return jsonify({"message": "error"})
 
 
-@app.route('/i/ctlg/symptom')
+@app.route('/i/ctlg/symptom', methods=["GET", "POST"])
 def getSymptom():
-    try:
-        cursor = mysql.connection.cursor()
-        sql = "SELECT * FROM ctlg_symptom"
-        cursor.execute(sql)
-        data = cursor.fetchall()
-        jsson = []
-        for row in data:
-            d = {"id": row[0], "name": row[1], "create_": row[2],
-                 "update_": row[3], "delete_": row[4]}
-            jsson.append(d)
-        return jsonify(jsson)
+    global alphabetSymptom
+    if(request.method == "GET"):
+        try:
+            cursor = mysql.connection.cursor()
+            sql = "SELECT * FROM ctlg_symptom"
+            cursor.execute(sql)
+            data = cursor.fetchall()
+            jsson = []
+            for row in data:
+                d = {"id": row[0], "name": row[1], "id_ctlg_alphabet":row[2],"create_": row[3],
+                 "update_": row[4], "delete_": row[5]}
+                id_ctlg_alphabet =  row[2]
+                print(f" ctlg {id_ctlg_alphabet}")
+                jsson.append(d)
+            return jsonify(jsson)
 
-    except Exception as ex:
-        return jsonify({"message": "error"})
+        except Exception as ex:
+            return jsonify({"message": "error"})
+    else:
+        alphabetSymptom = request.form.get('id')
+
 
 
 @app.route('/i/ctlg/medicines')
@@ -177,12 +187,17 @@ def medicineSearch():
     data = cursor.fetchall()
     jsson = []
     for row in data:
-        d = {"id": row[0], "name": row[1], "description": row[2], "id_ctlg_sales": row[3], "id_ctlg_recipe": row[4], "id_ctlg_symptom": row[5],
-             "id_ctlg_state_matter": row[6], "id_ctlg_pharmaceutical_forms": row[7], "id_ctlg_type_pharma": row[8], "create_": row[9], "update_": row[10], "delete_": row[11]}
-        jsson.append(d)
+        d = {"id": row[0], "name": row[1], "description": row[2], "id_ctlg_sales": row[3],
+             "id_ctlg_recipe": row[4], "id_ctlg_symptom": row[5], "id_ctlg_state_matter": row[6], "id_ctlg_pharmaceutical_forms": row[7],
+             "id_ctlg_type_pharma": row[8], "create_": row[9], "update_": row[10], "delete_": row[11]}
+        print(d)
+        if(symptom == d["id_ctlg_symptom"]):
+            jsson.append(d)
     allMedicine = {"medicine": jsson}
     for medicine in allMedicine['medicine']:
-        if((symptom == medicine["id_ctlg_symptom"]) and (recipe == medicine["id_ctlg_recipe"]) and (sales == medicine["id_ctlg_sales"]) and (state_matter == medicine["id_ctlg_state_matter"]) and (pharmaceutical_forms == medicine["id_ctlg_pharmaceutical_forms"]) and (type_pharma == medicine["id_ctlg_type_pharma"])):
+        if((recipe == medicine["id_ctlg_recipe"]) and (sales == medicine["id_ctlg_sales"]) and
+           (state_matter == medicine["id_ctlg_state_matter"]) and (pharmaceutical_forms == medicine["id_ctlg_pharmaceutical_forms"]) and
+                (type_pharma == medicine["id_ctlg_type_pharma"])):
             return jsonify([medicine])
         else:
             return jsonify({"message": "no se encontro medicamento"})
