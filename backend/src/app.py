@@ -19,8 +19,7 @@ def hello_world():
     return 'Hello, World!'
 
 
-
-#--------------TITLE:SINTOMAS----------------
+# --------------TITLE:SINTOMAS----------------
 @app.route('/i/ctlg/alphabet')
 def getAlphabet():
     try:
@@ -80,10 +79,10 @@ def getIdSymptom(id):
         return jsonify({"message": "error"})
     finally:
         return jsonify(allData)
-#--------------------------------------------
+# --------------------------------------------
 
 
-#-----------TITLE:SALES----------------------
+# -----------TITLE:SALES----------------------
 @app.route('/i/ctlg/sales')
 def getSales():
     try:
@@ -117,10 +116,10 @@ def getIdSales(id):
         return jsonify({"message": "error"})
     finally:
         return jsonify(allData)
-#-------------------------------------------
+# -------------------------------------------
 
 
-#------------------TITLE:RECIPE---------------
+# ------------------TITLE:RECIPE---------------
 @app.route('/i/ctlg/recipe')
 def getRecipe():
     try:
@@ -154,10 +153,10 @@ def getIdRecipe(id):
         return jsonify({"message": "error"})
     finally:
         return jsonify(allData)
-#-----------------------------------------------
+# -----------------------------------------------
 
 
-#-------------TITLE: PHARMACEUTICAL FORMS----------
+# -------------TITLE: PHARMACEUTICAL FORMS----------
 @app.route('/i/ctlg/pharmaceutical+forms')
 def getPharmaceuticalForms():
     try:
@@ -175,6 +174,7 @@ def getPharmaceuticalForms():
     except Exception as ex:
         return jsonify({"message": "error"})
 
+
 @app.route('/i/query/pharmaceutical+forms/<id>')
 def getIdPharmaceuticalForms(id):
     global allData
@@ -190,10 +190,10 @@ def getIdPharmaceuticalForms(id):
         return jsonify({"message": "error"})
     finally:
         return jsonify(allData)
-#----------------------------------------------------
+# ----------------------------------------------------
 
 
-#-----------TITLE:STATE MATTER----------------------
+# -----------TITLE:STATE MATTER----------------------
 @app.route('/i/ctlg/state+matter')
 def getStateMatter():
     try:
@@ -211,6 +211,7 @@ def getStateMatter():
     except Exception as ex:
         return jsonify({"message": "error"})
 
+
 @app.route('/i/query/state+matter/<id>')
 def getIdStateMatter(id):
     global allData
@@ -226,13 +227,16 @@ def getIdStateMatter(id):
         return jsonify({"message": "error"})
     finally:
         return jsonify(allData)
-#---------------------------------------------------
+# ---------------------------------------------------
 
 
-
+# ---------------TITLE: TYPE PHARMA-------------------
 @app.route('/i/ctlg/type+pharma')
 def getTypePharma():
     try:
+        pharmaceutical_forms = int(request.args.get("id_ctlg_pharmaceutical_forms"))
+        state_matter = int(request.args.get("id_ctlg_state_matter"))
+        print(pharmaceutical_forms, state_matter)
         cursor = mysql.connection.cursor()
         sql = "SELECT * FROM ctlg_type_pharma"
         cursor.execute(sql)
@@ -241,12 +245,34 @@ def getTypePharma():
         for row in data:
             d = {"id": row[0], "name": row[1], "type": row[2],
                  "id_ctlg_pharmaceutical_forms": row[3], "id_ctlg_state_matter": row[4], "create_": row[5], "update_": row[6], "delete_": row[7]}
-            jsson.append(d)
+            id_ctlg_pharmaceutical_forms = int(
+                d["id_ctlg_pharmaceutical_forms"])
+            id_ctlg_state_matter = int(d["id_ctlg_state_matter"])
+            if((pharmaceutical_forms == id_ctlg_pharmaceutical_forms) and (state_matter == id_ctlg_state_matter)):
+                print(d)
+                jsson.append(d)
         return jsonify(jsson)
 
     except Exception as ex:
         return jsonify({"message": "error"})
 
+@app.route('/i/query/type+pharma/<id>')
+def getIdTypePharma(id):
+    global allData
+    try:
+        idTypePharma = int(id)
+        am = []
+        for medicine in allData['medicine']:
+            if(idTypePharma == medicine["id_ctlg_type_pharma"]):
+                am.append(medicine)
+                print(am)
+        allData = {"medicine": am}
+    except Exception as ex:
+        return jsonify({"message": "error"})
+    finally:
+        return jsonify(allData)
+
+# ---------------------------------------------------
 
 
 @app.route('/i/ctlg/medicines')
