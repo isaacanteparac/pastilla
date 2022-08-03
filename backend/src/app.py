@@ -73,7 +73,7 @@ def getIdSymptom(id):
         for medicine in allData['medicine']:
             if(idSymptom == medicine["id_ctlg_symptom"]):
                 am.append(medicine)
-                print(am)
+
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -110,7 +110,7 @@ def getIdSales(id):
         for medicine in allData['medicine']:
             if(idSales == medicine["id_ctlg_sales"]):
                 am.append(medicine)
-                print(am)
+
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -147,7 +147,7 @@ def getIdRecipe(id):
         for medicine in allData['medicine']:
             if(idRecipe == medicine["id_ctlg_recipe"]):
                 am.append(medicine)
-                print(am)
+
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -184,7 +184,7 @@ def getIdPharmaceuticalForms(id):
         for medicine in allData['medicine']:
             if(idPharmaceuticalForms == medicine["id_ctlg_pharmaceutical_forms"]):
                 am.append(medicine)
-                print(am)
+
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -221,7 +221,7 @@ def getIdStateMatter(id):
         for medicine in allData['medicine']:
             if(idStateMatter == medicine["id_ctlg_state_matter"]):
                 am.append(medicine)
-                print(am)
+
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -234,7 +234,8 @@ def getIdStateMatter(id):
 @app.route('/i/ctlg/type+pharma')
 def getTypePharma():
     try:
-        pharmaceutical_forms = int(request.args.get("id_ctlg_pharmaceutical_forms"))
+        pharmaceutical_forms = int(
+            request.args.get("id_ctlg_pharmaceutical_forms"))
         state_matter = int(request.args.get("id_ctlg_state_matter"))
         print(pharmaceutical_forms, state_matter)
         cursor = mysql.connection.cursor()
@@ -256,6 +257,7 @@ def getTypePharma():
     except Exception as ex:
         return jsonify({"message": "error"})
 
+
 @app.route('/i/query/type+pharma/<id>')
 def getIdTypePharma(id):
     global allData
@@ -265,7 +267,7 @@ def getIdTypePharma(id):
         for medicine in allData['medicine']:
             if(idTypePharma == medicine["id_ctlg_type_pharma"]):
                 am.append(medicine)
-                print(am)
+
         allData = {"medicine": am}
     except Exception as ex:
         return jsonify({"message": "error"})
@@ -291,7 +293,6 @@ def getMedicine():
 
     except Exception as ex:
         return jsonify({"message": "error"})
-
 
 
 def divMedicine():

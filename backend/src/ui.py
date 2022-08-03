@@ -1,4 +1,3 @@
-from traceback import print_tb
 import requests
 
 alphabet = "http://127.0.0.1:5000/i/ctlg/alphabet"
@@ -29,60 +28,50 @@ def getDB(url, text_):
 def ctlgAlphabet(url):
     global userInputAlphabet
     getDB(url, f"seleccione una letra del alfabeto")
-    userInputAlphabet = int(input("ingrese el numero de la opcion: "))
+    #userInputAlphabet = int(input("ingrese el numero de la opcion: "))
+    userInputAlphabet = isInt()
 
 
 def ctlgSimptom(url):
     global userInputAlphabet
     url = f"{url}/{userInputAlphabet}"
     getDB(url, f"seleccione el simtoma con la letra {userInputAlphabet}")
-    userInputSymptom = int(input("ingrese el numero de la opcion: "))
+    userInputSymptom = isInt()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/symptom/{userInputSymptom}")
-    view = str(input("\nDesea visualizar los medicamentos si o no: "))
-    if(view == "si" or view == "SI"):
-        viewMedicine(v)
+    isStr(v)
 
 
 def ctlgSales(url):
     getDB(url, "seleccione el tipo de venta")
-    userInputSales = int(input("ingrese el numero de la opcion: "))
+    userInputSales = isInt()
     v = requests.get(f"http://127.0.0.1:5000/i/query/sales/{userInputSales}")
-    view = str(input("\nDesea visualizar los medicamentos si o no: "))
-    if(view == "si" or view == "SI"):
-        viewMedicine(v)
+    isStr(v)
 
 
 def ctlgRecipe(url):
     getDB(url, "seleccione el tipo recceta medica")
-    userInputRecipe = int(input("ingrese el numero de la opcion: "))
+    userInputRecipe = isInt()
     v = requests.get(f"http://127.0.0.1:5000/i/query/recipe/{userInputRecipe}")
-    view = str(input("\nDesea visualizar los medicamentos si o no: "))
-    if(view == "si" or view == "SI"):
-        viewMedicine(v)
+    isStr(v)
 
 
 def ctlgPharmaceuticalForms(url):
     global userInputPharmaceuticalForms
     getDB(url, "seleccione el tipo de forma farmaceutica")
-    userInputPharmaceuticalForms = int(
-        input("ingrese el numero de la opcion: "))
+    userInputPharmaceuticalForms = isInt()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/pharmaceutical+forms/{userInputPharmaceuticalForms}")
-    view = str(input("\nDesea visualizar los medicamentos si o no: "))
-    if(view == "si" or view == "SI"):
-        viewMedicine(v)
+    isStr(v)
 
 
 def ctlgStateMatter(url):
     global userInputStateMatter
     getDB(url, "seleccione el tipo de material")
-    userInputStateMatter = int(input("ingrese el numero de la opcion: "))
+    userInputStateMatter = isInt()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/state+matter/{userInputStateMatter}")
-    view = str(input("\nDesea visualizar los medicamentos si o no: "))
-    if(view == "si" or view == "SI"):
-        viewMedicine(v)
+    isStr(v)
 
 
 def ctlgTypePharma(url):
@@ -97,7 +86,7 @@ def ctlgTypePharma(url):
         id_ = data["id"]
         name = data["name"]
         print(f"    > {id_} =  {name}")
-    userInputTypePharma = int(input("ingrese el numero de la opcion: "))
+    userInputTypePharma = isInt()
 
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/type+pharma/{userInputTypePharma}")
@@ -117,6 +106,34 @@ def viewMedicine(response):
         print(f"                {description}\n")
     print(f"+++++++++++++++++++++++++++++++++++")
 
+
+def isInt():
+    int_ = 0
+    try:
+        int_ = int(input("ingrese el numero de la opcion: "))
+    except ValueError:
+        print("Esto no es un numero")
+        isInt()
+    finally:
+        if(int_ > 0):
+            return int_
+        else:
+            return isInt()
+
+def isStr(v):
+    str_ = ""
+    try:
+        str_ = str(input("\nDesea visualizar los medicamentos si o no: "))
+    except ValueError:
+        print("Esto no es un si o no")
+        isStr(v)
+    finally:
+        if(str_ == "si" or str_ == "SI"):
+            viewMedicine(v)
+        elif (str_ == "no" or str_ == "NO"):
+            return str_
+        else:
+            isStr(v)
 
 def main():
     ctlgAlphabet(alphabet)
