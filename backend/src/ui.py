@@ -1,3 +1,4 @@
+from os import system
 import requests
 
 alphabet = "http://127.0.0.1:5000/i/ctlg/alphabet"
@@ -35,7 +36,7 @@ def ctlgAlphabet(url):
 def ctlgSimptom(url):
     global userInputAlphabet
     url = f"{url}/{userInputAlphabet}"
-    getDB(url, f"seleccione el simtoma con la letra {userInputAlphabet}")
+    getDB(url, f"seleccione el simtoma")
     userInputSymptom = isInt()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/symptom/{userInputSymptom}")
@@ -50,7 +51,7 @@ def ctlgSales(url):
 
 
 def ctlgRecipe(url):
-    getDB(url, "seleccione el tipo recceta medica")
+    getDB(url, "seleccione el tipo receta medica")
     userInputRecipe = isInt()
     v = requests.get(f"http://127.0.0.1:5000/i/query/recipe/{userInputRecipe}")
     isStr(v)
@@ -120,6 +121,7 @@ def isInt():
         else:
             return isInt()
 
+
 def isStr(v):
     str_ = ""
     try:
@@ -135,7 +137,19 @@ def isStr(v):
         else:
             isStr(v)
 
+
+def name():
+    system("cls")
+    print("██████   █████   ██████ ████████ ██ ██      ██       █████ ")
+    print("██   ██ ██   ██ ██         ██    ██ ██      ██      ██   ██ ")
+    print("██████  ███████  █████     ██    ██ ██      ██      ███████ ")
+    print("██      ██   ██      ██    ██    ██ ██      ██      ██   ██ ")
+    print("██      ██   ██ ██████     ██    ██ ███████ ███████ ██   ██ ")
+
+
+
 def main():
+    name()
     ctlgAlphabet(alphabet)
     ctlgSimptom(symptom)
     ctlgSales(sales)

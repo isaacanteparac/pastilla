@@ -312,4 +312,4 @@ if __name__ == "__main__":
 
 
 
-#input 2 2 2 2
+#input 2 2 1 2
