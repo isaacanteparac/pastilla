@@ -109,3 +109,11 @@
 - 31 = f.f cutaneas liquidas
 - 32 = f.f cutaneas semisolidas
 - 33 = f.f cutaneas solidas
+
+**Time en ms**
+- 100 datos = 0.040035247802734375
+- 1000 datos = 0.08457756042480469
+- 20612 datos = 1.8526954650878906
+- 71418  datos = 1.897024154663086
+- 100921 datos = 1.7672405242919922
+- 205375 datos = 3.484729766845703
