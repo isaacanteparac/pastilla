@@ -91,7 +91,7 @@ def ctlgStateMatter(url):
 
 
 def ctlgTypePharma(url):
-    global userInputStateMatter, userInputPharmaceuticalForms, executionTime, completionTime, 
+    global userInputStateMatter, userInputPharmaceuticalForms, executionTime, completionTime
     data = {"id_ctlg_pharmaceutical_forms": userInputPharmaceuticalForms,
             "id_ctlg_state_matter": userInputStateMatter}
     response = requests.get(url, params=data)
@@ -107,8 +107,8 @@ def ctlgTypePharma(url):
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/type+pharma/{userInputTypePharma}")
     completionTime += time.time()
-    print(f"TIEMPO TOTAL {(completionTime - executionTime)}")
     viewMedicine(v)
+    print(f"TIEMPO TOTAL {(completionTime - executionTime)}")
 
 
 def viewMedicine(response):
