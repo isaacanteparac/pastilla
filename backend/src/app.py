@@ -1,10 +1,12 @@
 
 from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
-
+from flask_cors import CORS, cross_origin
 
 
 app = Flask(__name__)
+
+CORS(app)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'universidad'
@@ -21,6 +23,7 @@ def hello_world():
 
 
 # --------------TITLE:SINTOMAS----------------
+@cross_origin
 @app.route('/i/ctlg/alphabet')
 def getAlphabet():
     try:
@@ -38,7 +41,7 @@ def getAlphabet():
     except Exception as ex:
         return jsonify({"message": "error"})
 
-
+@cross_origin
 @app.route('/i/ctlg/symptom/<letter>')
 def getSymptom(letter):
     global allData
@@ -62,7 +65,7 @@ def getSymptom(letter):
         allData = {"medicine": dm}
         return jsonify(jsson)
 
-
+@cross_origin
 @app.route('/i/query/symptom/<id>')
 def getIdSymptom(id):
     global allData
@@ -84,6 +87,7 @@ def getIdSymptom(id):
 
 
 # -----------TITLE:SALES----------------------
+@cross_origin
 @app.route('/i/ctlg/sales')
 def getSales():
     try:
@@ -101,7 +105,7 @@ def getSales():
     except Exception as ex:
         return jsonify({"message": "error"})
 
-
+@cross_origin
 @app.route('/i/query/sales/<id>')
 def getIdSales(id):
     global allData
@@ -121,6 +125,7 @@ def getIdSales(id):
 
 
 # ------------------TITLE:RECIPE---------------
+@cross_origin
 @app.route('/i/ctlg/recipe')
 def getRecipe():
     try:
@@ -138,7 +143,7 @@ def getRecipe():
     except Exception as ex:
         return jsonify({"message": "error"})
 
-
+@cross_origin
 @app.route('/i/query/recipe/<id>')
 def getIdRecipe(id):
     global allData
@@ -158,6 +163,7 @@ def getIdRecipe(id):
 
 
 # -------------TITLE: PHARMACEUTICAL FORMS----------
+@cross_origin
 @app.route('/i/ctlg/pharmaceutical+forms')
 def getPharmaceuticalForms():
     try:
@@ -175,7 +181,7 @@ def getPharmaceuticalForms():
     except Exception as ex:
         return jsonify({"message": "error"})
 
-
+@cross_origin
 @app.route('/i/query/pharmaceutical+forms/<id>')
 def getIdPharmaceuticalForms(id):
     global allData
@@ -195,6 +201,7 @@ def getIdPharmaceuticalForms(id):
 
 
 # -----------TITLE:STATE MATTER----------------------
+@cross_origin
 @app.route('/i/ctlg/state+matter')
 def getStateMatter():
     try:
@@ -212,7 +219,7 @@ def getStateMatter():
     except Exception as ex:
         return jsonify({"message": "error"})
 
-
+@cross_origin
 @app.route('/i/query/state+matter/<id>')
 def getIdStateMatter(id):
     global allData
@@ -232,6 +239,7 @@ def getIdStateMatter(id):
 
 
 # ---------------TITLE: TYPE PHARMA-------------------
+@cross_origin
 @app.route('/i/ctlg/type+pharma')
 def getTypePharma():
     try:
@@ -257,7 +265,7 @@ def getTypePharma():
     except Exception as ex:
         return jsonify({"message": "error"})
 
-
+@cross_origin
 @app.route('/i/query/type+pharma/<id>')
 def getIdTypePharma(id):
     global allData
@@ -275,7 +283,7 @@ def getIdTypePharma(id):
         return jsonify(allData)
 # ---------------------------------------------------
 
-
+@cross_origin
 @app.route('/i/ctlg/medicines')
 def getMedicine():
     try:

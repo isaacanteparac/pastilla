@@ -1,5 +1,6 @@
 from os import system
 import requests
+import time
 
 alphabet = "http://127.0.0.1:5000/i/ctlg/alphabet"
 symptom = "http://127.0.0.1:5000/i/ctlg/symptom"
@@ -12,6 +13,8 @@ typePharma = "http://127.0.0.1:5000/i/ctlg/type+pharma"
 userInputAlphabet = 0
 userInputPharmaceuticalForms = 0
 userInputStateMatter = 0
+executionTime = 0
+completionTime = 0
 
 
 def getDB(url, text_):
@@ -29,54 +32,65 @@ def getDB(url, text_):
 def ctlgAlphabet(url):
     global userInputAlphabet
     getDB(url, f"seleccione una letra del alfabeto")
-    #userInputAlphabet = int(input("ingrese el numero de la opcion: "))
     userInputAlphabet = isInt()
 
 
 def ctlgSimptom(url):
-    global userInputAlphabet
+    global userInputAlphabet, executionTime, completionTime
     url = f"{url}/{userInputAlphabet}"
     getDB(url, f"seleccione el simtoma")
     userInputSymptom = isInt()
+    executionTime = time.time()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/symptom/{userInputSymptom}")
+    completionTime = time.time()
     isStr(v)
 
 
 def ctlgSales(url):
+    global executionTime, completionTime
     getDB(url, "seleccione el tipo de venta")
     userInputSales = isInt()
+    executionTime += time.time()
     v = requests.get(f"http://127.0.0.1:5000/i/query/sales/{userInputSales}")
+    completionTime += time.time()
     isStr(v)
 
 
 def ctlgRecipe(url):
+    global executionTime, completionTime
     getDB(url, "seleccione el tipo receta medica")
     userInputRecipe = isInt()
+    executionTime += time.time()
     v = requests.get(f"http://127.0.0.1:5000/i/query/recipe/{userInputRecipe}")
+    completionTime += time.time()
     isStr(v)
 
 
 def ctlgPharmaceuticalForms(url):
-    global userInputPharmaceuticalForms
+    global userInputPharmaceuticalForms, executionTime, completionTime
     getDB(url, "seleccione el tipo de forma farmaceutica")
     userInputPharmaceuticalForms = isInt()
+    executionTime += time.time()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/pharmaceutical+forms/{userInputPharmaceuticalForms}")
+    completionTime += time.time()
     isStr(v)
 
 
 def ctlgStateMatter(url):
-    global userInputStateMatter
+    global userInputStateMatter, executionTime, completionTime
     getDB(url, "seleccione el tipo de material")
     userInputStateMatter = isInt()
+    executionTime += time.time()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/state+matter/{userInputStateMatter}")
+    completionTime += time.time()
     isStr(v)
 
 
 def ctlgTypePharma(url):
-    global userInputStateMatter, userInputPharmaceuticalForms
+    global userInputStateMatter, userInputPharmaceuticalForms, executionTime, completionTime
     data = {"id_ctlg_pharmaceutical_forms": userInputPharmaceuticalForms,
             "id_ctlg_state_matter": userInputStateMatter}
     response = requests.get(url, params=data)
@@ -88,9 +102,12 @@ def ctlgTypePharma(url):
         name = data["name"]
         print(f"    > {id_} =  {name}")
     userInputTypePharma = isInt()
-
+    executionTime += time.time()
     v = requests.get(
         f"http://127.0.0.1:5000/i/query/type+pharma/{userInputTypePharma}")
+    completionTime += time.time()
+    totalTime = completionTime-executionTime
+    print(f"TIEMPO TOTAL {totaltime}")
     viewMedicine(v)
 
 
@@ -98,7 +115,6 @@ def viewMedicine(response):
     print(F"\n++++++++++++ MEDICINAS ++++++++++\n")
     dataJson = response.json()
     for data in dataJson['medicine']:
-        id_ = data["id"]
         name = data["name"]
         description = data["description"]
         print(f"    NOMBRE DE MEDICAMENTO:")
@@ -145,7 +161,6 @@ def name():
     print("██████  ███████  █████     ██    ██ ██      ██      ███████ ")
     print("██      ██   ██      ██    ██    ██ ██      ██      ██   ██ ")
     print("██      ██   ██ ██████     ██    ██ ███████ ███████ ██   ██ ")
-
 
 
 def main():
