@@ -1,0 +1,19 @@
+.head {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  top: 0;
+  z-index: 9998;
+  transition: all 0.5s;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #e4e2e2; }
+
+.contentHead {
+  margin-top: 10px; }
+
+.textLogo {
+  color: #FA314A;
+  font-family: 'Segoe UI';
+  font-size: 20px;
+  font-weight: bold; }

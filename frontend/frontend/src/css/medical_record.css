@@ -1,0 +1,41 @@
+.medicalRecord {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #e4e2e2;
+  margin: auto;
+  width: 85%;
+  height: 120px;
+  overflow: hidden;
+  padding: 10px; }
+
+.divTopMedicalRecord {
+  margin-bottom: 3px; }
+  .divTopMedicalRecord .TitleSection {
+    color: #0862F9;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Segoe UI'; }
+
+.contentInputMedicalRecord {
+  margin-bottom: 5px; }
+  .contentInputMedicalRecord label {
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    color: #6f6d6d; }
+
+.inputMedicalRecord {
+  width: 40px;
+  border: none;
+  font-family: 'Segoe UI';
+  border-bottom: 1px solid #6f6d6d;
+  position: relative;
+  bottom: 2px; }
+
+.divButton {
+  background-color: red; }
+  .divButton button {
+    margin: auto;
+    background-color: red;
+    border-radius: 15px;
+    width: 80%;
+    height: 30px; }

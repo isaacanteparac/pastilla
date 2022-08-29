@@ -1,0 +1,54 @@
+@mixin notUnderline{
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/*NOTE:CENTER ELEMENTS*/
+@mixin centerPosition{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin rightPosition{
+    display: flex;
+    align-items:flex-end;
+    justify-content:right;
+
+}
+
+@mixin leftPosition{
+    display: flex;
+    align-items:flex-start;
+    justify-content:left;
+}
+
+/*NOTE: PLACE ELEMENTS IN CENTERED COLUMANS*/
+@mixin centerPositionColumn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin leftPositionColumn{
+    display: flex;
+    align-items:flex-start;
+    justify-content:left;
+    flex-direction: column;
+}
+
+@mixin rightPositionColumn{
+    display: flex;
+    align-items:flex-end;
+    justify-content:right;
+    flex-direction: column;
+}
+
+@mixin wrapPosition {
+    display: flex;
+    flex-wrap: wrap;
+
+}
