@@ -1,4 +1,6 @@
 # Pastilla
+![Captura de pantalla 2022-06-11 180219](https://user-images.githubusercontent.com/69361351/196085783-9079bedd-b60d-4f46-a2d2-680b859ea58e.png)
+
 
 **INSTALL**
 
