@@ -2,7 +2,7 @@
 ![Captura de pantalla 2022-06-11 180219](https://user-images.githubusercontent.com/69361351/196085783-9079bedd-b60d-4f46-a2d2-680b859ea58e.png)
 
 
-**INSTALL**
+**Instalacion**
 
 - [Xampp 8.1.6](https://www.apachefriends.org/es/download.html)
 - [Python 3.10.4](https://www.python.org/downloads/)
@@ -20,16 +20,16 @@
 - GET catalogo de pharmaceutical forms http://127.0.0.1:5000/i/ctlg/pharmaceutical+forms
 - GET catalogo de type pharma http://127.0.0.1:5000/i/ctlg/type+pharma
 
-**IMPORT DATA TO THE DATABASE**
+**Datos**
 - Json
 - CSV
 
-**EXECUTION OF THE BACK-END**
+**Ejecutar la ApiRest**
 - Ingresar al folder backend
 - Luego al folder src
 - Escribir en la consola lo siguiente flask run
 
-**FUNCTIONING**
+**Funcionalidades**
 - seleccion de letra del sintoma, luego seleccion del sintoma en especifico
     EJEM a,b,c,
             seleccion A
